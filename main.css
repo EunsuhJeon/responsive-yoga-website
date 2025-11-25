@@ -49,6 +49,20 @@ button:active,
   opacity: 0.75;
 }
 
+@media (prefers-color-scheme: light) {
+  body {
+    background: #F5F0FF;
+    color: #220953;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #14092A;
+    color: #D1C0F1;
+  }
+}
+
 
 
 /* jade - start */
