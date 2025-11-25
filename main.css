@@ -2,4 +2,61 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+:root {
+  --btn-gradient: linear-gradient(135deg, #FF52AF, #9F53FF);
+  --btn-text: #fff;
+  --btn-radius: 64px;
+  --btn-padding: 12px 24px;
+  --btn-shadow: 0 4px 12px rgba(0, 0, 0, 0.20);
+}
+
+button,
+.btn {
+  background: var(--btn-gradient);
+  color: var(--btn-text);
+  padding: var(--btn-padding);
+  border: none;
+  border-radius: var(--btn-radius);
+  box-shadow: var(--btn-shadow);
+  
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Hover */
+button:hover,
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Active (cuando se hace click) */
+button:active,
+.btn:active {
+  transform: translateY(0);
+  opacity: 0.75;
+}
+
+
+
+/* jade - start */
+
+/* jade - end */
+
+
+
+/* Andrea - start */
+
+/* Andrea - end */
