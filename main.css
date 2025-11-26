@@ -319,6 +319,118 @@ header a{
     }
 }
 
+/* =============================================
+    Find influencers section Style
+============================================= */
+/* ===================
+    Mobile
+====================*/
+#section-influencers{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem 1.5rem;
+    text-align: center;
+}
+
+#section-influencers div:nth-child(1){
+    flex: none;
+}
+
+#section-influencers div:nth-child(2){
+    /* flex: none; */
+    width: 100%;
+}
+
+#section-influencers div:nth-child(3){
+    flex: none;
+}
+
+.influencers-main-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#section-influencers h2{
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.influencers-img-wrapper img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.influencers-desc-wrapper p,
+.influencers-link-wrapper a{
+    font-family: "Poppins", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 300;
+}
+
+.influencers-link-wrapper a{
+    white-space: nowrap;
+}
+
+/* ===================
+    Tablet
+====================*/
+@media (min-width: 600px){
+    #section-influencers{
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 2rem;
+        padding: 2rem 5rem;
+        align-items: center;
+        text-align: start;
+    }
+
+    #section-influencers div:nth-child(1){
+        flex: 5 1 0;
+    }
+
+    #section-influencers div:nth-child(2){
+        flex: 3.5 1 0;
+    }
+
+    #section-influencers div:nth-child(3){
+        flex: 1.5 1 0;
+    }
+
+    #section-influencers h2{
+        font-size: 3rem;
+    }
+
+    .influencers-desc-wrapper p,
+    .influencers-link-wrapper a{
+        font-size: 0.9375rem;
+    }
+}
+
+/* ===================
+    Desktop
+====================*/
+@media (min-width: 1024px){
+    #section-influencers{
+        padding: 1.8rem 10rem;
+    }
+
+    #section-influencers h2{
+        font-size: 3.75rem;
+    }
+
+    .influencers-desc-wrapper p,
+    .influencers-link-wrapper a{
+        font-size: 1rem;
+    }
+}
+
 
 /* jade - end */
 
