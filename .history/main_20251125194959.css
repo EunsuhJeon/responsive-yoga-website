@@ -145,16 +145,16 @@ button:active,
 .section-4-place-img-top {
   position: absolute;
   top: 0;
-  left: 0%;
-  width: 85%;
+  left: 10%;
+  width: 80%;
   z-index: 2;
 }
 
 .section-4-place-img-bottom {
   position: absolute;
   bottom: 0;
-  right: 0%;
-  width: 90%;
+  right: 10%;
+  width: 80%;
   z-index: 1;
 }
 
@@ -173,7 +173,6 @@ button:active,
   font-weight: 600;
   box-shadow: var(--btn-shadow);
   border: none;
-  z-index: 10;  
 }
 
 .pill-icon {
@@ -182,15 +181,15 @@ button:active,
 }
 
 .pill-btn-top {
-  top: 22%;
-  right: 12%;
-  transform: translate(20%, -50%);
+  top: 18%;
+  right: 0;
+  transform: translate(25%, -50%);
 }
 
 .pill-btn-bottom {
-  bottom: 12%;
-  left: 12%;
-  transform: translate(-15%, 50%);
+  bottom: 10%;
+  left: 10%;
+  transform: translate(-20%, 50%);
 }
 
 

@@ -147,7 +147,7 @@ button:active,
   top: 0;
   left: 0%;
   width: 85%;
-  z-index: 2;
+  z-index: 5;
 }
 
 .section-4-place-img-bottom {
@@ -173,7 +173,6 @@ button:active,
   font-weight: 600;
   box-shadow: var(--btn-shadow);
   border: none;
-  z-index: 10;  
 }
 
 .pill-icon {
@@ -183,7 +182,7 @@ button:active,
 
 .pill-btn-top {
   top: 22%;
-  right: 12%;
+  right: 5%;
   transform: translate(20%, -50%);
 }
 
