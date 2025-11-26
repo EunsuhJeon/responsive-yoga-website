@@ -455,84 +455,45 @@ button:active,
   }
 }
 
-/* ------------------------------------ Footer ----------------------------------- */
+/* -------- Footer -------- */
 
 .site-footer {
   margin-top: 80px;
   padding: 48px 16px 32px;
-  color: #F5E9FF;
-  background: #1E0849; /* Light mode */
+  color: #f5e9ff;
+  background: #1E0849;           /* light mode por defecto */
 }
 
-/* GRID principal: logo + Address + Contact + Office */
 .footer-inner {
   max-width: 1120px;
   margin: 0 auto 32px;
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 40px;
-  align-items: start; /* alinea logo y headings en la misma altura */
 }
 
-/* Columna marca (logo + texto) */
-.footer-logo {
-  height: 25px;
+.footer-col {
+  font-size: 0.9rem;
+}
+
+.footer-brand .footer-logo {
+  height: 32px;
   margin-bottom: 16px;
-  display: block;
 }
 
 .footer-description {
   font-size: 0.9rem;
   line-height: 1.6;
-  margin: 0;
+  max-width: 260px;
+  margin-bottom: 32px;
+  color: #d6c6ff;
 }
 
-/* Headings de columnas (Address, Contact, Office) */
-.footer-heading {
-  font-family: "Lora", serif;
-  font-size: 24px;              
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: #F5E9FF;      
-}
-
-/* Textos de columnas */
-.footer-text {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* Color para TODOS los textos secundarios:
-   "Take care...", "12345 M/01...", "+123...", "Monday...", y el copyright */
-.footer-description,
-.footer-text,
-.footer-copy {
-  color: #A197B4;
-}
-
-/* Línea divisoria */
-.footer-divider {
-  max-width: 1120px;
-  margin: 0 auto 16px;
-  height: 1px;
-  background: #3A226B;
-}
-
-/* Fila inferior: redes sociales (izquierda) + copyright (derecha) */
-.footer-bottom-row {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding-top: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* alinea íconos y texto en la misma altura */
-}
-
-/* Redes sociales */
+/* social icons */
 .footer-social {
   display: flex;
-  gap: 32px; /* spacing 32px entre iconos */
+  align-items: center;
+  gap: 32px;                     /* spacing 32px */
 }
 
 .footer-social img {
@@ -540,10 +501,37 @@ button:active,
   height: 24px;
 }
 
-/* Copyright */
+/* headings y textos columnas */
+.footer-heading {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #d6c6ff;
+}
+
+/* línea divisoria */
+.footer-divider {
+  max-width: 1120px;
+  margin: 0 auto 16px;
+  height: 1px;
+  background: #3a226b;
+}
+
+/* parte inferior */
+.footer-bottom {
+  max-width: 1120px;
+  margin: 0 auto;
+  text-align: right;
+}
+
 .footer-copy {
   font-size: 0.8rem;
-  margin: 0;
+  color: #b6a3e3;
 }
 
 /* -------- Footer responsive -------- */
@@ -556,14 +544,20 @@ button:active,
 }
 
 @media (max-width: 600px) {
+  .site-footer {
+    padding-top: 40px;
+  }
+
   .footer-inner {
     grid-template-columns: 1fr;
   }
 
-  .footer-bottom-row {
-    flex-direction: column;
-    gap: 16px;
-    align-items: flex-start;
+  .footer-bottom {
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: flex-start;
   }
 }
 
@@ -571,7 +565,7 @@ button:active,
 
 @media (prefers-color-scheme: dark) {
   .site-footer {
-    background: #14092A; /* Dark mode */
+    background: #14092A;     
   }
 }
 

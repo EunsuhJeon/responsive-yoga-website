@@ -460,79 +460,64 @@ button:active,
 .site-footer {
   margin-top: 80px;
   padding: 48px 16px 32px;
-  color: #F5E9FF;
+  color: #f5e9ff;
   background: #1E0849; /* Light mode */
 }
 
-/* GRID principal: logo + Address + Contact + Office */
+/* GRID PRINCIPAL */
 .footer-inner {
   max-width: 1120px;
-  margin: 0 auto 32px;
+  margin: 0 auto 48px;
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 40px;
-  align-items: start; /* alinea logo y headings en la misma altura */
+  align-items: start; /* ALINEA TODO EN LA MISMA ALTURA */
 }
 
-/* Columna marca (logo + texto) */
+/* Logo */
 .footer-logo {
-  height: 25px;
+  height: 32px;
   margin-bottom: 16px;
   display: block;
 }
 
+/* Texto debajo del logo */
 .footer-description {
   font-size: 0.9rem;
   line-height: 1.6;
-  margin: 0;
+  color: #A197B4;
+  margin: 0; /* IMPORTANTE PARA ALINEAR PERFECTO */
 }
 
-/* Headings de columnas (Address, Contact, Office) */
+/* Headings */
 .footer-heading {
-  font-family: "Lora", serif;
-  font-size: 24px;              
+  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 12px;
-  color: #F5E9FF;      
 }
 
 /* Textos de columnas */
 .footer-text {
   font-size: 0.9rem;
   line-height: 1.6;
-  margin: 0;
-}
-
-/* Color para TODOS los textos secundarios:
-   "Take care...", "12345 M/01...", "+123...", "Monday...", y el copyright */
-.footer-description,
-.footer-text,
-.footer-copy {
   color: #A197B4;
+  margin: 0; /* SE ALINEA EXACTO CON EL TEXTO DEL LOGO */
 }
 
 /* Línea divisoria */
 .footer-divider {
   max-width: 1120px;
-  margin: 0 auto 16px;
+  margin: 0 auto 24px;
   height: 1px;
-  background: #3A226B;
+  background: #3a226b;
 }
 
-/* Fila inferior: redes sociales (izquierda) + copyright (derecha) */
-.footer-bottom-row {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding-top: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* alinea íconos y texto en la misma altura */
-}
-
-/* Redes sociales */
+/* Redes sociales debajo de la línea */
 .footer-social {
+  max-width: 1120px;
+  margin: 0 auto 24px;
   display: flex;
-  gap: 32px; /* spacing 32px entre iconos */
+  gap: 32px;
 }
 
 .footer-social img {
@@ -540,18 +525,23 @@ button:active,
   height: 24px;
 }
 
-/* Copyright */
-.footer-copy {
-  font-size: 0.8rem;
-  margin: 0;
+/* Copyright alineado a la derecha */
+.footer-bottom {
+  max-width: 1120px;
+  margin: 0 auto;
+  text-align: right;
 }
 
-/* -------- Footer responsive -------- */
+.footer-copy {
+  font-size: 0.8rem;
+  color: #b6a3e3;
+}
 
+/* Responsive */
 @media (max-width: 900px) {
   .footer-inner {
     grid-template-columns: 1fr 1fr;
-    row-gap: 32px;
+    row-gap: 40px;
   }
 }
 
@@ -560,20 +550,16 @@ button:active,
     grid-template-columns: 1fr;
   }
 
-  .footer-bottom-row {
-    flex-direction: column;
-    gap: 16px;
-    align-items: flex-start;
+  .footer-bottom {
+    text-align: center;
   }
 }
 
-/* -------- Footer dark mode -------- */
-
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
   .site-footer {
-    background: #14092A; /* Dark mode */
+    background: #14092A;
   }
 }
-
 
 /* Andrea - end */
