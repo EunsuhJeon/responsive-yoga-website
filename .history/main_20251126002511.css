@@ -236,6 +236,8 @@ button:active,
   }
 }
 
+
+/* -------- Seccion 5 - Follow -------- */
 /* -------- Seccion 5 - Follow -------- */
 
 .seccion-5-follow {
@@ -284,22 +286,23 @@ button:active,
 /* Estilo base para todas las imágenes */
 .seccion-5-img {
   object-fit: cover;
-  border-radius: 192px;
-  background: transparent;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 120px;
 }
 
 /* Imágenes superiores (verticales) */
 .seccion-5-img-tl,
 .seccion-5-img-tr {
-  width: 280px;
-  height: 420px;
+  width: 220px;
+  height: 260px;
 }
 
-/* Imágenes inferiores (apaisadas, ya rotadas en el archivo) */
+/* Imágenes inferiores (apaisadas, ya vienen rotadas en archivo) */
 .seccion-5-img-bl,
 .seccion-5-img-br {
-  width: 500px;
-  height: 257px;
+  width: 260px;
+  height: 170px;
+  /* NO transform aquí */
 }
 
 /* Botón circular central */
@@ -321,9 +324,10 @@ button:active,
   height: 18px;
 }
 
-/* -------- Responsive -------- */
+/* -------- Responsive seccion 5 -------- */
 
 @media (max-width: 768px) {
+
   .seccion-5-follow {
     padding-top: 48px;
   }

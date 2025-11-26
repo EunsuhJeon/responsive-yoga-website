@@ -236,6 +236,7 @@ button:active,
   }
 }
 
+
 /* -------- Seccion 5 - Follow -------- */
 
 .seccion-5-follow {
@@ -244,7 +245,7 @@ button:active,
   padding: 80px 16px 96px;
 }
 
-/* Filas superior e inferior */
+/* filas superior e inferior */
 .seccion-5-top,
 .seccion-5-bottom {
   display: flex;
@@ -257,7 +258,7 @@ button:active,
   margin-bottom: 40px;
 }
 
-/* Texto del centro */
+/* bloque de texto central */
 .seccion-5-text {
   text-align: center;
 }
@@ -272,7 +273,7 @@ button:active,
   font-size: 1rem;
 }
 
-/* Hashtag #YOGA con gradiente */
+/* hashtag con gradiente rosa-violeta ya definido en --btn-gradient */
 .gradient-text {
   background: var(--btn-gradient);
   -webkit-background-clip: text;
@@ -281,28 +282,47 @@ button:active,
   font-weight: 700;
 }
 
-/* Estilo base para todas las imágenes */
+/* imágenes superiores (verticales) */
 .seccion-5-img {
+  width: 220px;
+  height: 260px;
   object-fit: cover;
-  border-radius: 192px;
-  background: transparent;
+  border-radius: 120px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Imágenes superiores (verticales) */
-.seccion-5-img-tl,
-.seccion-5-img-tr {
-  width: 280px;
-  height: 420px;
+/* ----- Imágenes inferiores con marco inclinado ----- */
+
+/* marco blanco apaisado */
+.seccion-5-img-wrapper {
+  width: 260px;
+  height: 170px;
+  border-radius: 120px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Imágenes inferiores (apaisadas, ya rotadas en el archivo) */
-.seccion-5-img-bl,
-.seccion-5-img-br {
-  width: 500px;
-  height: 257px;
+/* la foto dentro del marco */
+.seccion-5-img-wrapper img {
+  width: 120%;
+  height: 120%;
+  object-fit: cover;
 }
 
-/* Botón circular central */
+/* rotación del marco (y de la foto junto con él) */
+.seccion-5-img-wrapper-bl {
+  transform: rotate(-15deg);
+}
+
+.seccion-5-img-wrapper-br {
+  transform: rotate(15deg);
+}
+
+/* botón circular central: usa los estilos generales de .btn */
 .btn-circle {
   width: 96px;
   height: 96px;
@@ -321,7 +341,7 @@ button:active,
   height: 18px;
 }
 
-/* -------- Responsive -------- */
+/* -------- Responsive seccion 5 -------- */
 
 @media (max-width: 768px) {
   .seccion-5-follow {
@@ -345,8 +365,11 @@ button:active,
   .seccion-5-img-tr {
     order: 2;
   }
-}
 
+  .seccion-5-bottom {
+    align-items: center;
+  }
+}
 
 
 /* Andrea - end */

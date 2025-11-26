@@ -82,13 +82,13 @@ button:active,
 /* ---------- Section 4 - Place ---------- */
 /* ----------TIPOGRAFÍA / TEXTOS---------- */
 
-.section-4-title {
+.section-4-place-title {
   font-size: clamp(2.4rem, 3vw + 1.2rem, 3.4rem);
   line-height: 1.2;
   margin-bottom: 16px;
 }
 
-.section-4-text {
+.section-4-place-text {
   font-size: 0.95rem;
   line-height: 1.6;
   max-width: 360px;
@@ -236,6 +236,7 @@ button:active,
   }
 }
 
+
 /* -------- Seccion 5 - Follow -------- */
 
 .seccion-5-follow {
@@ -244,7 +245,7 @@ button:active,
   padding: 80px 16px 96px;
 }
 
-/* Filas superior e inferior */
+/* filas superior e inferior */
 .seccion-5-top,
 .seccion-5-bottom {
   display: flex;
@@ -257,7 +258,7 @@ button:active,
   margin-bottom: 40px;
 }
 
-/* Texto del centro */
+/* bloque de texto central */
 .seccion-5-text {
   text-align: center;
 }
@@ -268,11 +269,7 @@ button:active,
   margin-bottom: 8px;
 }
 
-.seccion-5-hashtag {
-  font-size: 1rem;
-}
-
-/* Hashtag #YOGA con gradiente */
+/* hashtag con gradiente rosa-violeta ya definido */
 .gradient-text {
   background: var(--btn-gradient);
   -webkit-background-clip: text;
@@ -281,28 +278,49 @@ button:active,
   font-weight: 700;
 }
 
-/* Estilo base para todas las imágenes */
+/* imágenes */
 .seccion-5-img {
+  width: 220px;
+  height: 260px;
   object-fit: cover;
-  border-radius: 192px;
-  background: transparent;
+  border-radius: 120px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Imágenes superiores (verticales) */
-.seccion-5-img-tl,
-.seccion-5-img-tr {
-  width: 280px;
-  height: 420px;
-}
-
-/* Imágenes inferiores (apaisadas, ya rotadas en el archivo) */
+/* abajo son más apaisadas */
 .seccion-5-img-bl,
 .seccion-5-img-br {
-  width: 500px;
-  height: 257px;
+  width: 260px;
+  height: 170px;
 }
 
-/* Botón circular central */
+/* rotaciones
+.seccion-5-img-bl {
+  transform: rotate(-15deg);
+}
+
+.seccion-5-img-br {
+  transform: rotate(15deg);
+}*/
+
+/* contenedor abajo izquierda */
+.seccion-5-img-wrapper-bl {
+  transform: rotate(-15deg);
+}
+
+/* contenedor abajo derecha */
+.seccion-5-img-wrapper-br {
+  transform: rotate(15deg);
+}
+
+/* imagen interna sin rotación */
+.seccion-5-img-wrapper-bl img,
+.seccion-5-img-wrapper-br img {
+  transform: rotate(0deg);
+}
+
+
+/* botón circular central: usa los colores globales de btn */
 .btn-circle {
   width: 96px;
   height: 96px;
@@ -321,32 +339,22 @@ button:active,
   height: 18px;
 }
 
-/* -------- Responsive -------- */
+/* -------- Responsive seccion 5 -------- */
 
 @media (max-width: 768px) {
+  .seccion-5-top,
+  .seccion-5-bottom {
+    flex-direction: column;
+  }
+
   .seccion-5-follow {
     padding-top: 48px;
   }
 
-  .seccion-5-top,
-  .seccion-5-bottom {
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .seccion-5-text {
-    order: 1;
-  }
-
-  .seccion-5-img-tl {
-    order: 0;
-  }
-
-  .seccion-5-img-tr {
-    order: 2;
+  .seccion-5-img-bl,
+  .seccion-5-img-br {
+    transform: none;           /* para que no se salgan del viewport en mobile */
   }
 }
-
-
 
 /* Andrea - end */

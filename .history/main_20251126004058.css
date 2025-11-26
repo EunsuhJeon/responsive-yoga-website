@@ -284,7 +284,7 @@ button:active,
 /* Estilo base para todas las imágenes */
 .seccion-5-img {
   object-fit: cover;
-  border-radius: 192px;
+  border-radius: 120px;
   background: transparent;
 }
 
@@ -298,8 +298,9 @@ button:active,
 /* Imágenes inferiores (apaisadas, ya rotadas en el archivo) */
 .seccion-5-img-bl,
 .seccion-5-img-br {
-  width: 500px;
-  height: 257px;
+  width: 260px;
+  height: 170px;
+  /* no transform */
 }
 
 /* Botón circular central */
