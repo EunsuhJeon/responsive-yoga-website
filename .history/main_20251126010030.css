@@ -359,18 +359,18 @@ button:active,
 
 .newsletter-box {
   width: 100%;
-  background: var(--btn-gradient); /* tu gradiente rosa-violeta */
+  background: var(--btn-gradient); /* usa tu gradiente rosa–violeta */
   padding: 60px 40px;
   border-radius: 32px;
   text-align: center;
-  color: #ffffff;
+  color: white;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 .newsletter-title {
   font-size: clamp(2rem, 2.4vw + 1rem, 2.8rem);
-  font-weight: 600;
   margin-bottom: 16px;
+  font-weight: 600;
 }
 
 .newsletter-subtitle {
@@ -381,52 +381,39 @@ button:active,
   opacity: 0.9;
 }
 
-/* ---------- Formulario ---------- */
-
+/* form */
 .newsletter-form {
   display: flex;
-  justify-content: center;
-}
-
-.newsletter-input-wrapper {
-  display: flex;
   align-items: center;
-  background: #ffffff;
-  border-radius: 999px;
-  padding: 4px;
-  max-width: 520px;
-  width: 100%;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-/* input */
 .newsletter-input {
-  flex: 1;
+  width: 320px;
+  max-width: 80%;
+  padding: 14px 24px;
+  border-radius: 32px;
   border: none;
-  outline: none;
-  padding: 14px 20px;
   font-size: 14px;
-  border-radius: 999px;
-  background: transparent;
-  color: #333;
+  outline: none;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
 
 .newsletter-input::placeholder {
-  color: #9b9bb5;
+  color: #555;
 }
 
-/* botón */
 .newsletter-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   padding: 12px 24px;
-  border-radius: 999px;
+  border-radius: 32px;
   background: var(--btn-gradient);
   color: var(--btn-text);
-  border: 2px solid #ffffff;
   box-shadow: var(--btn-shadow);
-  flex-shrink: 0;
 }
 
 .newsletter-btn .btn-icon {
@@ -434,24 +421,21 @@ button:active,
   height: 18px;
 }
 
-/* ---------- Responsive ---------- */
+/* -------- Responsive -------- */
 
 @media (max-width: 768px) {
-
   .newsletter-box {
     padding: 48px 24px;
   }
 
-  .newsletter-input-wrapper {
+  .newsletter-form {
     flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-    padding: 16px;
+    gap: 16px;
   }
 
-  .newsletter-btn {
+  .newsletter-input {
     width: 100%;
-    justify-content: center;
+    max-width: 100%;
   }
 }
 
