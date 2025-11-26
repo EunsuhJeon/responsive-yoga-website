@@ -283,23 +283,29 @@ button:active,
 
 /* Estilo base para todas las imágenes */
 .seccion-5-img {
+  !important;
+}
+
+.seccion-5-img {
   object-fit: cover;
-  border-radius: 192px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 120px;
   background: transparent;
 }
 
 /* Imágenes superiores (verticales) */
 .seccion-5-img-tl,
 .seccion-5-img-tr {
-  width: 280px;
-  height: 420px;
+  width: 220px;
+  height: 260px;
 }
 
 /* Imágenes inferiores (apaisadas, ya rotadas en el archivo) */
 .seccion-5-img-bl,
 .seccion-5-img-br {
-  width: 500px;
-  height: 257px;
+  width: 260px;
+  height: 170px;
+  /* no transform */
 }
 
 /* Botón circular central */

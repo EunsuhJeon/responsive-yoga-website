@@ -236,6 +236,7 @@ button:active,
   }
 }
 
+
 /* -------- Seccion 5 - Follow -------- */
 
 .seccion-5-follow {
@@ -244,7 +245,7 @@ button:active,
   padding: 80px 16px 96px;
 }
 
-/* Filas superior e inferior */
+/* filas superior e inferior */
 .seccion-5-top,
 .seccion-5-bottom {
   display: flex;
@@ -257,7 +258,7 @@ button:active,
   margin-bottom: 40px;
 }
 
-/* Texto del centro */
+/* bloque de texto central */
 .seccion-5-text {
   text-align: center;
 }
@@ -272,7 +273,7 @@ button:active,
   font-size: 1rem;
 }
 
-/* Hashtag #YOGA con gradiente */
+/* hashtag con gradiente rosa-violeta ya definido en --btn-gradient */
 .gradient-text {
   background: var(--btn-gradient);
   -webkit-background-clip: text;
@@ -281,28 +282,37 @@ button:active,
   font-weight: 700;
 }
 
-/* Estilo base para todas las imágenes */
+/* estilo base de todas las imágenes de la sección 5 */
 .seccion-5-img {
   object-fit: cover;
-  border-radius: 192px;
-  background: transparent;
+  border-radius: 120px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Imágenes superiores (verticales) */
+/* imágenes superiores (verticales) */
 .seccion-5-img-tl,
 .seccion-5-img-tr {
-  width: 280px;
-  height: 420px;
+  width: 220px;
+  height: 260px;
 }
 
-/* Imágenes inferiores (apaisadas, ya rotadas en el archivo) */
+/* imágenes inferiores (apaisadas y rotadas) */
 .seccion-5-img-bl,
 .seccion-5-img-br {
-  width: 500px;
-  height: 257px;
+  width: 260px;
+  height: 170px;
 }
 
-/* Botón circular central */
+/* rotaciones de las de abajo */
+.seccion-5-img-bl {
+  transform: rotate(-15deg);
+}
+
+.seccion-5-img-br {
+  transform: rotate(15deg);
+}
+
+/* botón circular central: usa los estilos generales de .btn */
 .btn-circle {
   width: 96px;
   height: 96px;
@@ -321,7 +331,7 @@ button:active,
   height: 18px;
 }
 
-/* -------- Responsive -------- */
+/* -------- Responsive seccion 5 -------- */
 
 @media (max-width: 768px) {
   .seccion-5-follow {
@@ -346,7 +356,6 @@ button:active,
     order: 2;
   }
 }
-
 
 
 /* Andrea - end */
