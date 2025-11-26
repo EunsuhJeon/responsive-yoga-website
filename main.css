@@ -72,6 +72,105 @@ button:active,
 
 
 /* jade - start */
+/* =============================================
+    Header Style
+============================================= */
+/* ===================
+    Mobile-first
+====================*/
+ul{
+    list-style: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+}
+
+header a{
+    text-decoration: none;
+}
+
+.align-items-center{
+    display: flex;
+    align-items: center;
+}
+
+/* logo */
+.logo{
+    width: 3rem;
+    height: auto;
+}
+
+.logo img{
+    width: 100%;
+}
+
+/* theme toggle */
+.theme-toggle{
+    width: 1.2rem;
+    height: auto;
+}
+
+.theme-toggle img{
+    width: 100%;
+}
+
+/* global navigation */
+.nav-global{
+    display: none;
+}
+
+.nav-global ul{
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+
+.nav-global ul a:link,
+.nav-global ul a:visited{
+    color: #220953;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ===================
+    Tablet
+====================*/
+@media (min-width: 600px){
+    .nav-global {
+        display: block;
+    }
+
+    header ul {
+        display: flex;
+        gap: 1.25rem;
+    }
+}
+
+/* ===================
+    Desktop
+====================*/
+@media (min-width: 1024px){
+    header {
+        padding: 1.8rem 10rem;
+    }
+
+    header ul {
+        gap: 2.3rem;
+    }
+
+    .logo { 
+        width: 3rem;
+    }
+
+    .theme-toggle {
+        width: 1.6rem;
+    }
+}
+
+
+
 
 /* jade - end */
 
