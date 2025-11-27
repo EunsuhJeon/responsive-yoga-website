@@ -124,6 +124,13 @@ header a{
 }
 
 /* global navigation */
+.nav-global-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
 .nav-global{
     display: none;
 }
@@ -199,13 +206,46 @@ header a{
 .hero-desc-wrapper h1{
     font-size: 2rem;
     font-weight: 500;
+    position: relative;
+    z-index: 10;
 }
 
-.hero-desc-wrapper > p{
+.hero-desc-text{
     font-size: 0.875rem;
     font-weight: 300;
     padding: 1rem 0;
 }
+
+/*  */
+.hero-desc-items{
+    position: relative;
+}
+
+.hero-desc-items img{
+    position: absolute;
+}
+
+.hero-emphasis{
+    transform: rotate(10deg);
+    display: inline-block;
+    background: var(--btn-gradient);
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 11px;
+}
+
+.hero-icon-home-star{
+    width: 15%;
+    top: 67%;
+    right: 75%;
+}
+
+.hero-icon-round-group{
+    width: 4%;
+    top: 79%;
+    right: 11%;
+}
+/*  */
 
 .hero-desc-wrapper .hero-desc-stats{
     display: flex;
@@ -258,12 +298,24 @@ header a{
     .hero-img-wrapper{
         flex: 4.5 1 0;
     }
+/*  */
+    .hero-icon-home-star{
+        top: 35%;
+        right: 15%;
+    }
+
+    .hero-icon-round-group{
+        width: 4%;
+        bottom: 80%;
+        right: 103%;
+    }
+/*  */
 
     .hero-desc-wrapper h1{
         font-size: 3rem;
     }
 
-    .hero-desc-wrapper > p{
+    .hero-desc-text{
         font-size: 0.9375rem;
         padding: 1.5rem 0;
     }
@@ -296,7 +348,7 @@ header a{
         font-size: 5rem;
     }
 
-    .hero-desc-wrapper > p{
+    .hero-desc-text{
         font-size: 1rem;
         padding: 2rem 0;
         width: 70%;
@@ -359,10 +411,27 @@ header a{
     font-weight: 300;
 }
 
-.influencers-img-wrapper img{
+.influencers-img-wrapper{
+    position: relative;
+    text-align: center;
+}
+
+.influencers-img-bg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
+    background-color: #E5D9FD;
+    height: 80%;
+    border-radius: 200px;
+}
+
+.influencers-img-wrapper img{
+    width: 85%;
     height: auto;
     object-fit: contain;
+    position: relative;
+    z-index: 10;
 }
 
 .p-content,
@@ -389,11 +458,11 @@ header a{
     }
 
     #section-influencers div:nth-child(1){
-        flex: 5.2 1 0;
+        flex: 6 1 0;
     }
 
     #section-influencers div:nth-child(2){
-        flex: 3.3 1 0;
+        flex: 4 1 0;
     }
 
     #section-influencers div:nth-child(3){
