@@ -98,6 +98,11 @@ header a{
     align-items: center;
 }
 
+.poppins{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
 /* logo */
 .logo{
     width: 3rem;
@@ -196,13 +201,7 @@ header a{
     font-weight: 500;
 }
 
-.hero-desc-wrapper > input[type=button]{
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-}
-
 .hero-desc-wrapper > p{
-    font-family: "Poppins", sans-serif;
     font-size: 0.875rem;
     font-weight: 300;
     padding: 1rem 0;
@@ -231,7 +230,6 @@ header a{
 }
 
 .hero-stats-desc{
-    font-family: "Poppins", sans-serif;
     font-size: 0.75rem;
     font-weight: 300;
 }
@@ -328,10 +326,10 @@ header a{
 #section-influencers{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
-    padding: 1.5rem 1.5rem;
+    padding: 3rem 1.5rem;
     text-align: center;
 }
 
@@ -356,8 +354,8 @@ header a{
     gap: 2rem;
 }
 
-#section-influencers h2{
-    font-size: 2.5rem;
+.h2-content{
+    font-size: 1.7rem;
     font-weight: 300;
 }
 
@@ -367,9 +365,8 @@ header a{
     object-fit: contain;
 }
 
-.influencers-desc-wrapper p,
+.p-content,
 .influencers-link-wrapper a{
-    font-family: "Poppins", sans-serif;
     font-size: 0.875rem;
     font-weight: 300;
 }
@@ -386,28 +383,28 @@ header a{
         flex-direction: row;
         justify-content: flex-start;
         gap: 2rem;
-        padding: 2rem 5rem;
+        padding: 3rem 5rem;
         align-items: center;
         text-align: start;
     }
 
     #section-influencers div:nth-child(1){
-        flex: 5 1 0;
+        flex: 5.2 1 0;
     }
 
     #section-influencers div:nth-child(2){
-        flex: 3.5 1 0;
+        flex: 3.3 1 0;
     }
 
     #section-influencers div:nth-child(3){
         flex: 1.5 1 0;
     }
 
-    #section-influencers h2{
+    .h2-content{
         font-size: 3rem;
     }
 
-    .influencers-desc-wrapper p,
+    .p-content,
     .influencers-link-wrapper a{
         font-size: 0.9375rem;
     }
@@ -418,18 +415,97 @@ header a{
 ====================*/
 @media (min-width: 1024px){
     #section-influencers{
-        padding: 1.8rem 10rem;
+        padding: 3rem 10rem;
     }
 
-    #section-influencers h2{
+    .h2-content{
         font-size: 3.75rem;
     }
 
-    .influencers-desc-wrapper p,
+    .p-content,
     .influencers-link-wrapper a{
         font-size: 1rem;
     }
 }
+
+/* =============================================
+    Find influencers section Style
+============================================= */
+/* ===================
+    Mobile
+====================*/
+#section-wellness-cta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1.5rem;
+    gap: 2rem;
+    text-align: center;
+}
+
+.wellness-img-wrapper{
+    flex: none;
+    order: 2;
+}
+
+.wellness-desc-wrapper{
+    flex: none;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.wellness-img-wrapper img{
+    width: 100%;
+}
+
+.wellness-desc-wrapper p{
+    padding-top: 1.5rem;
+}
+
+/* ===================
+    Tablet
+====================*/
+@media (min-width: 600px){
+    #section-wellness-cta{
+        flex-direction: row;
+        padding: 2rem 5rem;
+        gap: 2rem;
+        text-align: start;
+    }
+
+    .wellness-img-wrapper{
+        flex: 4.5 1 0;
+        order: 1;
+    }
+
+    .wellness-desc-wrapper{
+        flex: 5.5 1 0;
+        order: 2;
+        align-items: flex-start;
+    }
+}
+
+/* ===================
+    Desktop
+====================*/
+@media (min-width: 1024px){
+    #section-wellness-cta{
+        padding: 1.8rem 10rem;
+    }
+}
+
+
+
+
+
+
+
+
 
 
 /* jade - end */
