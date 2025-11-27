@@ -17,24 +17,32 @@
         <a class="logo align-items-center" href="#">
             <img src="./assets/logos/logo.png" alt="logo">
         </a>
-        <nav class="nav-global">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services1</a></li>
-                <li><a href="#">Services2</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <a class="theme-toggle align-items-center" href="#">
-            <img src="./assets/icons/moon-icon.png" alt="dark mode toggle">
-        </a>
+        <div class="nav-global-wrapper">
+            <nav class="nav-global">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services1</a></li>
+                    <li><a href="#">Services2</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <a class="theme-toggle align-items-center" href="#">
+                <img src="./assets/icons/moon-icon.png" alt="dark mode toggle">
+            </a>
+        </div>
     </header>
     <main>
         <!-- Jade - start -->
         <section id="section-hero">
             <div class="hero-desc-wrapper">
-                <h1>Choose Your<br>Best Yoga<br>Teacher</h1>
-                <p class="poppins">Calm your mind and body with the best yoga teachers available, relax your day and stay positive.</p>
+                <div class="hero-desc-items">
+                    <h1>Choose Your<br>Best <span class="hero-emphasis">Yoga</span><br>Teacher</h1>
+                    <img class="hero-icon-home-star" src="./assets/icons/home-star.png" alt="home star">
+                </div>
+                <div class="hero-desc-items">
+                    <img class="hero-icon-round-group" src="./assets/icons/round-group.png" alt="round group">
+                    <p class="hero-desc-text poppins">Calm your mind and body with the best yoga teachers available, relax your day and stay positive.</p>
+                </div>
                 <input class="btn poppins" type="button" value="Get Started Free &rarr;">
                 <div class="hero-desc-stats">
                     <div>
@@ -43,7 +51,7 @@
                     </div>
                     <div>
                         <div class="hero-stats-num">40+</div>
-                        <p class="hero-stats-desc">Participants</p>
+                        <p class="hero-stats-desc poppins">Participants</p>
                     </div>
                 </div>
             </div>
@@ -55,6 +63,7 @@
             <div class="influencers-main-wrapper">
                 <h2 class="h2-content">#01</h2>
                 <div class="influencers-img-wrapper">
+                    <div class="influencers-img-bg"></div>
                     <img src="./assets/images/yoga-item1.png" alt="find influencers">
                 </div>
             </div>
