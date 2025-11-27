@@ -666,15 +666,14 @@ header a{
 .seccion-5-img-br {
   width: 500px;
   height: 257px;
-  margin-top: 20px;
 }
 
 .seccion-5-img-bl {
-  transform: scale(1.25) translateX(-15px);
+  transform: scale(1.25) translateX(-10px);
 }
 
 .seccion-5-img-br {
-  transform: scale(1.25) translateX(15px);
+  transform: scale(1.25) translateX(10px);
 }
 
 

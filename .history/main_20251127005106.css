@@ -635,7 +635,7 @@ header a{
 }
 
 .seccion-5-hashtag {
-  font-size: clamp(2rem, 4vw + 0.5rem, 3.06rem);
+  font-size: clamp(2rem, 4vw + 0.5rem, 4rem);
 }
 
 /* Hashtag #YOGA con gradiente */
@@ -666,17 +666,7 @@ header a{
 .seccion-5-img-br {
   width: 500px;
   height: 257px;
-  margin-top: 20px;
 }
-
-.seccion-5-img-bl {
-  transform: scale(1.25) translateX(-15px);
-}
-
-.seccion-5-img-br {
-  transform: scale(1.25) translateX(15px);
-}
-
 
 /* Botón circular central */
 .btn-circle {

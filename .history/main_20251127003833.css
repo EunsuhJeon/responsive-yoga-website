@@ -604,7 +604,8 @@ header a{
 }
 
 /* Filas superior e inferior */
-.seccion-5-top {
+.seccion-5-top,
+.seccion-5-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -615,12 +616,6 @@ header a{
   margin-bottom: 40px;
 }
 
-.seccion-5-bottom {
-  display: flex;
-  justify-content: center;
-  gap: 0px;
-}
-
 /* Texto del centro */
 .seccion-5-text {
   text-align: center;
@@ -629,13 +624,13 @@ header a{
 .seccion-5-title {
   font-size: clamp(2rem, 4vw + 0.5rem, 4rem); /* máx 64px */
   line-height: 1.1;
-  margin-top: 120px;
+  margin-bottom: 6px;
   font-weight: 400; 
-
 }
 
 .seccion-5-hashtag {
-  font-size: clamp(2rem, 4vw + 0.5rem, 3.06rem);
+  font-size: clamp(2rem, 4vw + 0.5rem, 4rem);
+  font-weight: 700; 
 }
 
 /* Hashtag #YOGA con gradiente */
@@ -644,7 +639,7 @@ header a{
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-weight: 400;
+  font-weight: 700;
 } 
 
 /* Estilo base para todas las imágenes */
@@ -666,17 +661,7 @@ header a{
 .seccion-5-img-br {
   width: 500px;
   height: 257px;
-  margin-top: 20px;
 }
-
-.seccion-5-img-bl {
-  transform: scale(1.25) translateX(-15px);
-}
-
-.seccion-5-img-br {
-  transform: scale(1.25) translateX(15px);
-}
-
 
 /* Botón circular central */
 .btn-circle {
