@@ -926,7 +926,6 @@ header a{
 .seccion-5-img-tr {
   width: 280px;
   height: 420px;
-  transition: transform 0.35s ease;
 }
 
 /* Imágenes inferiores (apaisadas, ya rotadas en el archivo) */
@@ -935,7 +934,6 @@ header a{
   width: 500px;
   height: 257px;
   margin-top: 20px;
-  transition: transform 0.35s ease;
 }
 
 .seccion-5-img-bl {
