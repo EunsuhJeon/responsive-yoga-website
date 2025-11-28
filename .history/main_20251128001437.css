@@ -522,7 +522,7 @@ header a{
   font-size: clamp(2.4rem, 3vw + 1.2rem, 3.4rem);
   font-weight: 300; 
   line-height: 1.2;
-  margin-bottom: 35px;
+  margin-bottom: 16px;
 }
 
 .section-4-text {
@@ -573,8 +573,8 @@ header a{
 
 .section-4-place-images {
   position: relative;
-  width: 430px;
-  height: 430px;
+  width: 360px;
+  height: 360px;
 }
 
 .section-4-place-img {
@@ -587,16 +587,16 @@ header a{
 .section-4-place-img-top {
   position: absolute;
   top: 0;
-  left: -25px;
-  width: 95%;
+  left: 0%;
+  width: 85%;
   z-index: 2;
 }
 
 .section-4-place-img-bottom {
   position: absolute;
-  bottom: -20px;
+  bottom: 0;
   right: 0%;
-  width: 85%;
+  width: 90%;
   z-index: 1;
 }
 
@@ -607,27 +607,27 @@ header a{
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 8px;
-  border-radius: 10px;
-  background: #ffffff; 
+  padding: 8px 16px;
+  border-radius: 16px;
+  background: #ffffff;
+  color: linear-gradient(90deg, #FF52AF, #9F53FF);
+  /* Degradado para el texto 
+  background-image: linear-gradient(90deg, #FF52AF, #9F53FF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;*/
+  
+  font-size: 0.75rem;
+  font-weight: 500;
   box-shadow: var(--btn-shadow);
   border: none;
   z-index: 10; 
-}
-
-.pill-gradient-text {
-  background: linear-gradient(90deg, #FF52AF, #8262ec);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-weight: 500;
-  font-family: "Poppins", sans-serif;   
-  font-size: 0.75rem;
+  font-family: "Poppins", sans-serif; 
 }
 
 .pill-icon {
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
 }
 
 .pill-btn-top {
@@ -679,7 +679,7 @@ header a{
 
   .pill-btn-bottom {
     bottom: 6%;
-    left: 20%;  
+    left: 20%;
     transform: translate(0, 50%);
   }
 }

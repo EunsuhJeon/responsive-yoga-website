@@ -607,7 +607,7 @@ header a{
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 8px;
+  padding: 8px 8px;
   border-radius: 10px;
   background: #ffffff; 
   box-shadow: var(--btn-shadow);

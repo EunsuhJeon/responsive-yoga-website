@@ -607,7 +607,7 @@ header a{
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 8px;
+  padding: 12px 16px;
   border-radius: 10px;
   background: #ffffff; 
   box-shadow: var(--btn-shadow);
@@ -626,7 +626,7 @@ header a{
 }
 
 .pill-icon {
-  width: 22px;
+  width: 25px;
   height: 22px;
 }
 
