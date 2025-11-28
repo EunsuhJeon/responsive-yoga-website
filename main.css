@@ -560,6 +560,7 @@ header a{
 .wellness-img-wrapper{
     flex: none;
     order: 2;
+    position: relative;
 }
 
 .wellness-desc-wrapper{
@@ -574,6 +575,60 @@ header a{
 
 .wellness-img-wrapper img{
     width: 100%;
+    position: relative;
+}
+
+.wellness-float-box{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    position: absolute;
+    background-color: #ffffff;
+    height: 15%;
+    border-radius: 16px;
+    z-index: 10;
+    padding: 0.4rem 0.7rem;
+}
+
+.heart-rate{
+    flex-direction: row;
+    width: 45%;
+    left: 0;
+    top: 20%;
+    gap: 0.6rem;
+}
+
+.heart-rate > img{
+    flex: 1 1 0;
+    height: 100%;
+    object-fit: contain;
+}
+
+.heart-rate > div{
+    flex: 2 1 0;
+    text-align: start;
+}
+
+.wellness-float-title,
+.wellness-float-content{
+    font-weight: 500;
+    font-size: 0.66rem;
+}
+
+.wellness-float-content{
+    background: var(--btn-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.courses-count{
+    flex-direction: column;
+    align-items: baseline;
+    width: 35%;
+    right: 0;
+    bottom: 10%;
 }
 
 .wellness-desc-wrapper p{
@@ -601,6 +656,11 @@ header a{
         order: 2;
         align-items: flex-start;
     }
+
+    .wellness-float-title,
+    .wellness-float-content{
+        font-size: 0.7rem;
+    }
 }
 
 /* ===================
@@ -609,6 +669,11 @@ header a{
 @media (min-width: 1024px){
     #section-wellness-cta{
         padding: 1.8rem 10rem;
+    }
+
+    .wellness-float-title,
+    .wellness-float-content{
+        font-size: 1.3rem;
     }
 }
 
