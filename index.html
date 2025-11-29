@@ -18,17 +18,67 @@
             <img src="./assets/logos/logo.png" alt="logo">
         </a>
         <div class="nav-global-wrapper">
+            <input type="checkbox" id="theme-toggle" class="checkbox-toggle"/>
+            <label for="theme-toggle" class="toggle-icons align-items-center">
+                <img src="./assets/icons/moon-icon.png" alt="dark mode toggle">
+            </label>
+            <input type="checkbox" id="menu-toggle" class="checkbox-toggle"/>
+            <label for="menu-toggle" class="menu-btn toggle-icons align-items-center">
+                <img src="./assets/icons/lgith-apps.png" alt="mobile menu toggle">
+            </label>
             <nav class="nav-global">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Services1</a></li>
-                    <li><a href="#">Services2</a></li>
-                    <li><a href="#">Contact</a></li>
+                <label for="menu-toggle" class="menu-close">✕</label>
+                <ul class="nav-menu">
+                    <li>
+                        <a href="#">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Option1</a></li>
+                            <li><a href="#">Option2</a></li>
+                            <li><a href="#">Option3</a></li>
+                            <li><a href="#">Option4</a></li>
+                            <li><a href="#">Option5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Services1</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Option1</a></li>
+                            <li><a href="#">Option2</a></li>
+                            <li><a href="#">Option3</a></li>
+                            <li><a href="#">Option4</a></li>
+                            <li><a href="#">Option5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Services2</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Option1</a></li>
+                            <li><a href="#">Option2</a></li>
+                            <li><a href="#">Option3</a></li>
+                            <li><a href="#">Option4</a></li>
+                            <li><a href="#">Option5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Option1</a></li>
+                            <li><a href="#">Option2</a></li>
+                            <li><a href="#">Option3</a></li>
+                            <li><a href="#">Option4</a></li>
+                            <li><a href="#">Option5</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
-            <a class="theme-toggle align-items-center" href="#">
+            <!-- 
+            <a class="toggle-icons align-items-center" href="#">
                 <img src="./assets/icons/moon-icon.png" alt="dark mode toggle">
             </a>
+            <a class="menu-btn toggle-icons align-items-center" href="#">
+                <img src="./assets/icons/lgith-apps.png" alt="menu buttons">
+            </a>
+            -->
         </div>
     </header>
     <main>
