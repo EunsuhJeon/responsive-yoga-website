@@ -13,11 +13,18 @@ body{
 }
 
 :root {
-  --btn-gradient: linear-gradient(135deg, #FF52AF, #9F53FF);
-  --btn-text: #fff;
-  --btn-radius: 64px;
-  --btn-padding: 12px 24px;
-  --btn-shadow: 0 4px 12px rgba(0, 0, 0, 0.20);
+    --btn-gradient: linear-gradient(135deg, #FF52AF, #9F53FF);
+    --btn-text: #fff;
+    --btn-radius: 64px;
+    --btn-padding: 12px 24px;
+    --btn-shadow: 0 4px 12px rgba(0, 0, 0, 0.20);
+
+    --bg-color: #F5F0FF;
+    --title-color: #220953;
+    --contnet-color: #4B3E65;
+    --container-bg-color: #E5D9FD;
+    --small-container-bg-color: #ffffff;
+    --dropdown-bg-color: #F5F0FF;
 }
 
 button,
@@ -51,8 +58,8 @@ button:active,
 
 @media (prefers-color-scheme: light) {
   body {
-    background: #F5F0FF;
-    color: #220953;
+    background: var(--bg-color);
+    color: var(--title-color);
   }
 }
 
@@ -72,6 +79,28 @@ button:active,
 
 
 /* jade - start */
+/* dark/light mode */
+body:has(#theme-toggle:checked){
+    --bg-color: #14092A;
+    --title-color: #D1C0F1;
+    --contnet-color: #D1C0F1;
+    --container-bg-color: #372A51;
+    --dropdown-bg-color: #D1C0F1;
+    --small-container-bg-color: #372A51;
+}
+
+body:has(#theme-toggle:checked) .go-to-light{
+    display: block;
+}
+
+body:has(#theme-toggle:checked) .go-to-dark{
+    display: none;
+}
+
+body:has(body:has(#theme-toggle:checked)) .go-to-dark{
+    display: none;
+}
+
 /* Prevent horizontal scroll for mobile */
 html, 
 body{ 
@@ -192,6 +221,10 @@ label[for="theme-toggle"]{
     order: 2;
 }
 
+.go-to-light{
+    display: none;
+}
+
 .menu-btn{
     order: 3;
 }
@@ -202,9 +235,9 @@ label[for="theme-toggle"]{
     gap: 2.5rem
 }
 
-.nav-global ul a:link,
-.nav-global ul a:visited{
-    color: #220953;
+.nav-global > ul > li > a:link,
+.nav-global > ul > li > a:visited{
+    color: var(--title-color);
     font-family: "Poppins", sans-serif;
 }
 
@@ -267,7 +300,7 @@ label[for="theme-toggle"]{
         min-width: 150px;
         display: none;
         z-index: 100;
-        background-color: #F5F0FF;
+        background-color: var(--dropdown-bg-color);
         box-shadow: 
         0px 10px 10px rgba(0, 0, 0, 0.15),
         -3px 8px 8px rgba(0, 0, 0, 0.1),
@@ -279,6 +312,8 @@ label[for="theme-toggle"]{
         padding: 10px 15px;
         display: block;
         font-weight: 400;
+        color: #220953;
+        font-family: "Poppins", sans-serif;
     }
 
     .dropdown li a:hover {
@@ -556,7 +591,7 @@ label[for="theme-toggle"]{
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #E5D9FD;
+    background-color: var(--container-bg-color);
     height: 80%;
     border-radius: 200px;
 }
@@ -723,7 +758,7 @@ label[for="theme-toggle"]{
     justify-content: center;
     background-color: #ffffff;
     position: absolute;
-    background-color: #ffffff;
+    background-color: var(--small-container-bg-color);
     height: 15%;
     border-radius: 16px;
     z-index: 10;
