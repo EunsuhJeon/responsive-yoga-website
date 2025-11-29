@@ -72,21 +72,35 @@ button:active,
 
 
 /* jade - start */
+/* Prevent horizontal scroll for mobile */
+html, 
+body{ 
+    overflow-x:hidden; width:100%; 
+}
+
+section, 
+div, 
+header, 
+main{ 
+    position:relative; 
+}
+
+ul{
+    list-style: none;
+}
+
 /* =============================================
     Header Style
 ============================================= */
 /* ===================
     Mobile-first
 ====================*/
-ul{
-    list-style: none;
-}
-
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.25rem 2rem;
+    height: 4rem;
 }
 
 header a{
@@ -114,12 +128,16 @@ header a{
 }
 
 /* theme toggle */
-.theme-toggle{
+.checkbox-toggle{
+    display: none;
+}
+
+.toggle-icons{
     width: 1.2rem;
     height: auto;
 }
 
-.theme-toggle img{
+.toggle-icons img{
     width: 100%;
 }
 
@@ -128,13 +146,50 @@ header a{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2.5rem;
+    gap: 1.5rem;
 }
 
+/* mobile global nav */
 .nav-global{
-    display: none;
+    /* display: none; */
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: fixed;
+    top: 4rem;
+    right: -80%;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    width: 75%;
+    height: 30rem;
+    z-index: 20;
+    padding: 1rem 3rem;
 }
 
+.menu-close{
+    align-self: flex-end;
+}
+
+.nav-global ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#menu-toggle:checked ~ .nav-global {
+  right: 0;
+}
+
+label[for="theme-toggle"]{
+    order: 2;
+}
+
+.menu-btn{
+    order: 3;
+}
+
+/* movlie global nav end */
 .nav-global ul{
     justify-content: space-between;
     gap: 2.5rem
@@ -150,13 +205,33 @@ header a{
     Tablet
 ====================*/
 @media (min-width: 600px){
+    .nav-global-wrapper{
+        gap: 2.5rem;
+    }
+
     .nav-global {
         display: block;
+        order: 1;
+        position: static;
+        background-color: rgba(0, 0, 0, 0);
+        backdrop-filter: none;
+        width: auto;
+        height: auto;
+        z-index: inherit;
+        padding: 0;
+    }
+
+    .nav-global ul{
+        flex-direction: row;
     }
 
     header ul {
         display: flex;
         gap: 1.25rem;
+    }
+
+    label[for="menu-toggle"]{
+        display: none;
     }
 }
 
@@ -166,6 +241,7 @@ header a{
 @media (min-width: 1024px){
     header {
         padding: 1.8rem 10rem;
+        height: 5.8rem;
     }
 
     header ul {
@@ -176,7 +252,7 @@ header a{
         width: 3rem;
     }
 
-    .theme-toggle {
+    .toggle-icons {
         width: 1.6rem;
     }
 }
@@ -411,6 +487,11 @@ header a{
 .influencers-img-wrapper{
     position: relative;
     text-align: center;
+}
+
+.influencers-img-wrapper img,
+.influencers-img-bg { 
+    max-width:100%; overflow:hidden; 
 }
 
 .influencers-img-bg{
