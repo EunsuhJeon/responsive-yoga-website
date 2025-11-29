@@ -25,6 +25,7 @@ body{
     --container-bg-color: #E5D9FD;
     --small-container-bg-color: #ffffff;
     --dropdown-bg-color: #F5F0FF;
+    --mobile-nav-bg-color: rgba(255, 255, 255, 0.3);
 }
 
 button,
@@ -87,6 +88,7 @@ body:has(#theme-toggle:checked){
     --container-bg-color: #372A51;
     --dropdown-bg-color: #D1C0F1;
     --small-container-bg-color: #372A51;
+    --mobile-nav-bg-color: rgba(26, 26, 26, 0.3);
 }
 
 body:has(#theme-toggle:checked) .go-to-light{
@@ -195,7 +197,7 @@ header a{
     position: fixed;
     top: 4rem;
     right: -80%;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: var(--mobile-nav-bg-color);
     backdrop-filter: blur(8px);
     width: 75%;
     height: 30rem;
