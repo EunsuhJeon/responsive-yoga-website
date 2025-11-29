@@ -149,6 +149,13 @@ header a{
     gap: 1.5rem;
 }
 
+.nav-menu > li > a:hover,
+.nav-menu > li > a:active{
+    background: var(--btn-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 /* mobile global nav */
 .nav-global{
     /* display: none; */
@@ -201,6 +208,10 @@ label[for="theme-toggle"]{
     font-family: "Poppins", sans-serif;
 }
 
+.nav-menu .dropdown{
+    display: none;
+}
+
 /* ===================
     Tablet
 ====================*/
@@ -240,7 +251,6 @@ label[for="theme-toggle"]{
 
     .nav-menu a {
         text-decoration: none;
-        color: #333;
         padding: 10px 15px;
         display: block;
         font-weight: 500;
@@ -264,14 +274,14 @@ label[for="theme-toggle"]{
          3px 12px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .dropdown li a {
+    .dropdown li a:link,
+    .dropdown li a:visited {
         padding: 10px 15px;
         display: block;
-        color: #333;
         font-weight: 400;
     }
 
-    .dropdown li:hover {
+    .dropdown li a:hover {
         background: var(--btn-gradient);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
