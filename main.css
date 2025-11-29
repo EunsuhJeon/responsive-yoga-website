@@ -202,11 +202,17 @@ header a{
     gap: 1.5rem;
 }
 
+.nav-menu > li > a{
+    transform: translateY(0);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
 .nav-menu > li > a:hover,
 .nav-menu > li > a:active{
     background: var(--btn-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transform: translateY(-5px);
 }
 
 /* mobile global nav */
@@ -474,6 +480,21 @@ label[for="theme-toggle"]{
     width: 100%;
     height: auto;
     object-fit: contain;
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.hero-img-wrapper img:hover {
+    transform: scale(1.1);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.hero-btn {
+  animation: float 3s ease-in-out infinite;
 }
 
 /* ===================
@@ -635,6 +656,12 @@ label[for="theme-toggle"]{
     object-fit: contain;
     position: relative;
     z-index: 10;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.influencers-img-wrapper img:hover {
+    opacity: 0.7;
 }
 
 .influencers-desc-wrapper,
@@ -677,6 +704,21 @@ label[for="theme-toggle"]{
     left: 0px;
 }
 
+@keyframes fadeInOut{
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-slow{
+  animation: fadeInOut 4s ease-in-out infinite;
+}
 
 /* ===================
     Tablet
@@ -842,6 +884,25 @@ label[for="theme-toggle"]{
 
 .wellness-desc-wrapper p{
     padding-top: 1.5rem;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  10% { transform: translateX(-5px); }
+  20% { transform: translateX(5px); }
+  30% { transform: translateX(-5px); }
+  40% { transform: translateX(5px); }
+  50% { transform: translateX(-5px); }
+  60% { transform: translateX(5px); }
+  70% { transform: translateX(-5px); }
+  80% { transform: translateX(5px); }
+  90% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.wellness-btn {
+  display: inline-block;
+  animation: shake 3s ease-in-out infinite;
 }
 
 /* ===================
