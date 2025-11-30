@@ -16,3 +16,9 @@ For Forms and Grid, original designs can be found in Figma.
 The original design authors is:
 
 Young kim: [Responsive yoga website](https://www.figma.com/community/file/1229610063156797225)
+
+## Development Team
+| Name      | Assigned Part           | Key Roles & Features                                                                 |
+|-----------|------------------------|------------------------------------------------------------------------------------|
+| Jade    | Header, Top of Main     | - Implemented dark/light mode toggle button<br>- Styled mobile & desktop navigation separately<br>- Developed webpage according to mockup, ensured responsive design |
+| Andrea    | Bottom of Main, Footer  | - Developed webpage according to mockup, ensured responsive design                 |
