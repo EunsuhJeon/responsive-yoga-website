@@ -14,25 +14,31 @@
 </head>
 <body>
     <header>
+        <!-- logo - go to main page -->
         <a class="logo align-items-center" href="#">
             <img src="./assets/logos/logo.png" alt="logo">
         </a>
+        <!-- global navigation -->
         <div class="nav-global-wrapper">
+            <!-- toggle for controlling dark/light mode -->
             <input type="checkbox" id="theme-toggle" class="checkbox-toggle"/>
             <label for="theme-toggle" class="toggle-icons align-items-center">
                 <img class="go-to-dark" src="./assets/icons/moon-icon.png" alt="dark mode toggle">
                 <img class="go-to-light" src="./assets/icons/sun-icon.png" alt="light mode toggle">
             </label>
-            <input type="checkbox" id="menu-toggle" class="checkbox-toggle"/>
+            <!-- toggle for opening global menu (mobile only) -->
+            <input type="checkbox" id="menu-toggle" class="checkbox-toggle" checked="false"/>
             <label for="menu-toggle" class="menu-btn toggle-icons align-items-center">
                 <img class="go-to-dark" src="./assets/icons/lgith-apps.png" alt="mobile light menu toggle">
                 <img class="go-to-light" src="./assets/icons/dark-apps.png" alt="mobile dark menu toggle">
             </label>
             <nav class="nav-global">
+                <!-- toggle for closing global menu (mobile only) -->
                 <label for="menu-toggle" class="menu-close">✕</label>
                 <ul class="nav-menu">
                     <li>
                         <a href="#">Home</a>
+                        <!-- dropdown menu for each gloabal nav items -->
                         <ul class="dropdown">
                             <li><a href="#">Option1</a></li>
                             <li><a href="#">Option2</a></li>
@@ -73,18 +79,11 @@
                     </li>
                 </ul>
             </nav>
-            <!-- 
-            <a class="toggle-icons align-items-center" href="#">
-                <img src="./assets/icons/moon-icon.png" alt="dark mode toggle">
-            </a>
-            <a class="menu-btn toggle-icons align-items-center" href="#">
-                <img src="./assets/icons/lgith-apps.png" alt="menu buttons">
-            </a>
-            -->
         </div>
     </header>
     <main>
         <!-- Jade - start -->
+        <!-- 1st section (hero) -->
         <section id="section-hero">
             <div class="hero-desc-wrapper">
                 <div class="hero-desc-items">
@@ -95,7 +94,7 @@
                     <img class="hero-icon-round-group" src="./assets/icons/round-group.png" alt="round group">
                     <p class="hero-desc-text poppins">Calm your mind and body with the best yoga teachers available, relax your day and stay positive.</p>
                 </div>
-                <input class="hero-btn btn poppins" type="button" value="Get Started Free &rarr;">
+                <a href="#" class="hero-btn btn poppins">Get Started Free &rarr;</a>
                 <div class="hero-desc-stats">
                     <div>
                         <div class="hero-stats-num">300+</div>
@@ -111,6 +110,7 @@
                 <img src="./assets/images/banner-img.png" alt="banner yoga image">
             </div>
         </section>
+        <!-- 2nd section (influencers) -->
         <section id="section-influencers">
             <div class="influencers-main-wrapper">
                 <h2 class="h2-content">#01</h2>
@@ -128,6 +128,7 @@
                 <a class="poppins" href="#">Next &rarr;</a>
             </div>
         </section>
+        <!-- 3rd section (wellness-cta) -->
         <section id="section-wellness-cta">
             <div class="wellness-img-wrapper">
                 <div class="wellness-float-box heart-rate">
@@ -146,7 +147,7 @@
             <div class="wellness-desc-wrapper">
                 <h2 class="h2-content">Bring Happiness To Good Health!</h2>
                 <p class="p-content poppins">If you take care of your good health, take care of your mentality and lead a healthy life with positive thoughts every day.</p>
-                <input class="wellness-btn btn poppins" type="button" value="Let's Start &rarr;">
+                <a href="#" class="wellness-btn btn poppins">Let's Start &rarr;</a>
             </div>
         </section>
         <!-- Jade - end -->
