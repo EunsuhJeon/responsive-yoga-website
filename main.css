@@ -704,8 +704,8 @@ label[for="theme-toggle"]{
 
 .influencers-icon-list-star{
     width: 8%;
-    top: -22px;
-    left: 0px;
+    top: -18px;
+    left: -12px;
 }
 
 @keyframes fadeInOut{
