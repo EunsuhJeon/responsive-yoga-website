@@ -170,6 +170,13 @@ header a{
     font-weight: 400;
 }
 
+#section-hero a,
+#section-inflencers a,
+#section-wellness-cta a{
+    text-decoration: none;
+    display: inline-block;
+}
+
 /* logo */
 .logo{
     width: 3rem;
@@ -249,6 +256,10 @@ header a{
 
 label[for="theme-toggle"]{
     order: 2;
+}
+
+.nav-global-wrapper label:hover{
+    cursor: pointer;
 }
 
 .go-to-light{
