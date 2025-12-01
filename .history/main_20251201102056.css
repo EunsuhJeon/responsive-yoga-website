@@ -50,8 +50,6 @@ main{
     --padding-x-tablet: 2rem 0;
     --padding-x-desktop: 3rem 0;
     /* Jade - variables - end */
-    /* Sección 4 - Andrea  - Light Mode*/
-    --pill-btn-bg: #ffffff;    
 }
 
 button,
@@ -67,6 +65,11 @@ button,
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.2s ease;
+
+  /* Sección 4 - Andrea  - Light Mode*/
+  --pill-btn-bg: #ffffff;
+  --pill-btn-text: #372A51;
+
 }
 
 /* Hover */
@@ -99,8 +102,9 @@ body:has(#theme-toggle:checked){
     --dropdown-bg-color: #D1C0F1;
     --small-container-bg-color: #372A51;
     --mobile-nav-bg-color: rgba(26, 26, 26, 0.3);
-  /* Sección 4 - Andrea */
-    --pill-btn-bg: #372A51; 
+  /* Andrea: Section-4 pill buttons change to #372A51 in dark mode*/
+    --pill-btn-bg: #372A51;
+    --pill-btn-text: #F5F0FF;
 }
 
 body:has(#theme-toggle:checked) .go-to-light{
@@ -949,36 +953,33 @@ label[for="theme-toggle"]{
 
 /* Andrea - start */
 
-/* ================================
-   SECTION 4 - PLACE
-================================ */
+/* ---------- Section 4 - Place ---------- */
 
-/* Tipografías / textos */
+/* TIPOGRAFÍA / TEXTOS */
 
 .section-4-title {
   font-size: clamp(2.4rem, 3vw + 1.2rem, 3.4rem);
-  font-weight: 300;
+  font-weight: 300; 
   line-height: 1.2;
   margin-bottom: 35px;
 }
 
 .section-4-text {
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-weight: 300; 
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 24px;
-  margin-right: 20px;
+  margin-right:20px;
 }
 
-/* Botón principal */
-
+/* botón principal dentro de la sección */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   gap: 10px;
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-weight: 300; 
 }
 
 .btn-icon {
@@ -986,26 +987,22 @@ label[for="theme-toggle"]{
   height: 20px;
 }
 
-/* ---------- Layout SECTION 4 (mobile default) ---------- */
 
 .section-4-place {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 64px 16px;
+  padding: 80px 16px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
-  gap: 32px;
+  justify-content: space-between;
+  gap: 56px;
 }
 
 .section-4-place-content {
-  order: 1;
   flex: 1;
 }
 
 .section-4-place-media {
-  order: 2;
   flex: 1;
   position: relative;
   display: flex;
@@ -1014,8 +1011,8 @@ label[for="theme-toggle"]{
 
 .section-4-place-images {
   position: relative;
-  width: 280px;
-  height: 280px;
+  width: 430px;
+  height: 430px;
 }
 
 .section-4-place-img {
@@ -1028,22 +1025,20 @@ label[for="theme-toggle"]{
 .section-4-place-img-top {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 90%;
+  left: -25px;
+  width: 95%;
   z-index: 2;
-  border-radius: 192px;
-  box-shadow: 0 0 0 8px var(--bg-color);
 }
 
 .section-4-place-img-bottom {
   position: absolute;
-  bottom: -10px;
-  right: 0;
-  width: 90%;
+  bottom: -20px;
+  right: 0%;
+  width: 85%;
   z-index: 1;
 }
 
-/* Botones blancos (pills) */
+/* ---------- BOTONES BLANCOS (PILLS) ---------- */
 
 .pill-btn {
   position: absolute;
@@ -1053,9 +1048,10 @@ label[for="theme-toggle"]{
   padding: 10px 8px;
   border-radius: 10px;
   background: var(--pill-btn-bg);
+  color: var(--pill-btn-text); 
   box-shadow: var(--btn-shadow);
   border: none;
-  z-index: 10;
+  z-index: 10; 
 }
 
 .pill-gradient-text {
@@ -1064,7 +1060,7 @@ label[for="theme-toggle"]{
   background-clip: text;
   color: transparent;
   font-weight: 500;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;   
   font-size: 0.75rem;
 }
 
@@ -1074,78 +1070,60 @@ label[for="theme-toggle"]{
 }
 
 .pill-btn-top {
-  top: 18%;
-  right: 8%;
+  top: 22%;
+  right: 12%;
   transform: translate(20%, -50%);
 }
 
 .pill-btn-bottom {
-  bottom: 10%;
-  left: 10%;
+  bottom: 12%;
+  left: 12%;
   transform: translate(-15%, 50%);
 }
 
-/* ---------- Tablet SECTION 4 (>=600px) ---------- */
 
-@media (min-width: 600px) {
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 768px) {
   .section-4-place {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    text-align: left;
-    padding: 80px 16px;
-    gap: 56px;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 48px;
   }
 
   .section-4-place-content {
     order: 1;
   }
 
+  .section-4-place-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .section-4-place-media {
     order: 2;
+    width: 100%;
   }
 
   .section-4-place-images {
-    width: 360px;
-    height: 360px;
+    width: 280px;
+    height: 280px;
   }
 
   .pill-btn-top {
-    top: 22%;
-    right: 12%;
-    transform: translate(20%, -50%);
+    top: 12%;
+    right: 8%;
+    transform: translate(0, -50%);
   }
 
   .pill-btn-bottom {
-    bottom: 12%;
-    left: 12%;
-    transform: translate(-15%, 50%);
+    bottom: 6%;
+    left: 20%;  
+    transform: translate(0, 50%);
   }
 }
 
-/* ---------- Desktop SECTION 4 (>=1024px) ---------- */
-
-@media (min-width: 1024px) {
-  .section-4-place-images {
-    width: 430px;
-    height: 430px;
-  }
-
-  .section-4-place-img-top {
-    left: -25px;
-    width: 95%;
-  }
-
-  .section-4-place-img-bottom {
-    bottom: -20px;
-    right: 0;
-    width: 85%;
-  }
-}
-
-/* ================================
-   SECTION 5 - FOLLOW
-================================ */
+/* -------- Seccion 5 - Follow -------- */
 
 .seccion-5-follow {
   max-width: 1120px;
@@ -1153,31 +1131,35 @@ label[for="theme-toggle"]{
   padding: 80px 16px 96px;
 }
 
-/* Filas superior e inferior (mobile default: columna) */
-
-.seccion-5-top,
-.seccion-5-bottom {
+/* Filas superior e inferior */
+.seccion-5-top {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 24px;
+  justify-content: space-between;
+  gap: 32px;
 }
 
 .seccion-5-top {
   margin-bottom: 40px;
 }
 
-/* Texto del centro */
+.seccion-5-bottom {
+  display: flex;
+  justify-content: center;
+  gap: 0px;
+}
 
+/* Texto del centro */
 .seccion-5-text {
   text-align: center;
 }
 
 .seccion-5-title {
-  font-size: clamp(2rem, 4vw + 0.5rem, 4rem);
+  font-size: clamp(2rem, 4vw + 0.5rem, 4rem); /* máx 64px */
   line-height: 1.1;
-  margin-top: 40px;
-  font-weight: 400;
+  margin-top: 120px;
+  font-weight: 400; 
+
 }
 
 .seccion-5-hashtag {
@@ -1185,17 +1167,15 @@ label[for="theme-toggle"]{
 }
 
 /* Hashtag #YOGA con gradiente */
-
 .gradient-text {
   background: var(--btn-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   font-weight: 400;
-}
+} 
 
 /* Estilo base para todas las imágenes */
-
 .seccion-5-img {
   object-fit: contain;
   border-radius: 192px;
@@ -1203,34 +1183,32 @@ label[for="theme-toggle"]{
 }
 
 /* Imágenes superiores (verticales) */
-
 .seccion-5-img-tl,
 .seccion-5-img-tr {
-  width: 240px;
-  height: 360px;
+  width: 280px;
+  height: 420px;
   transition: transform 0.35s ease;
 }
 
 /* Imágenes inferiores (apaisadas, ya rotadas en el archivo) */
-
 .seccion-5-img-bl,
 .seccion-5-img-br {
-  width: 360px;
-  height: 220px;
+  width: 500px;
+  height: 257px;
   margin-top: 20px;
   transition: transform 0.35s ease;
 }
 
 .seccion-5-img-bl {
-  transform: scale(1.15) translateX(-10px);
+  transform: scale(1.25) translateX(-15px);
 }
 
 .seccion-5-img-br {
-  transform: scale(1.15) translateX(10px);
+  transform: scale(1.25) translateX(15px);
 }
 
-/* Botón circular central */
 
+/* Botón circular central */
 .btn-circle {
   width: 96px;
   height: 96px;
@@ -1257,8 +1235,8 @@ label[for="theme-toggle"]{
 
 .follow-btn span {
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  font-weight: 500;   
+  letter-spacing: 0.5px; 
 }
 
 /* Animations */
@@ -1296,51 +1274,33 @@ label[for="theme-toggle"]{
   animation: pulseCircle 3.5s ease-in-out infinite;
 }
 
-/* -------- Tablet SECTION 5 (>=600px) -------- */
+/* -------- Responsive -------- */
 
-@media (min-width: 600px) {
+@media (max-width: 768px) {
+  .seccion-5-follow {
+    padding-top: 48px;
+  }
+
   .seccion-5-top,
   .seccion-5-bottom {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 32px;
+    flex-direction: column;
+    gap: 24px;
   }
 
-  .seccion-5-title {
-    margin-top: 120px;
+  .seccion-5-text {
+    order: 1;
   }
 
-  .seccion-5-img-tl,
+  .seccion-5-img-tl {
+    order: 0;
+  }
+
   .seccion-5-img-tr {
-    width: 280px;
-    height: 420px;
-  }
-
-  .seccion-5-img-bl,
-  .seccion-5-img-br {
-    width: 420px;
-    height: 240px;
+    order: 2;
   }
 }
 
-/* -------- Desktop SECTION 5 (>=1024px) -------- */
-
-@media (min-width: 1024px) {
-  .seccion-5-img-bl,
-  .seccion-5-img-br {
-    width: 500px;
-    height: 257px;
-    transform: scale(1.25) translateX(-15px);
-  }
-
-  .seccion-5-img-br {
-    transform: scale(1.25) translateX(15px);
-  }
-}
-
-/* ================================
-   SECTION 6 - NEWSLETTER
-================================ */
+/* -------- Seccion 6 - Newsletter -------- */
 
 .seccion-6-newsletter {
   max-width: 1120px;
@@ -1352,8 +1312,8 @@ label[for="theme-toggle"]{
 
 .newsletter-box {
   width: 100%;
-  background: var(--btn-gradient);
-  padding: 48px 24px;
+  background: var(--btn-gradient); /* tu gradiente rosa-violeta */
+  padding: 60px 40px;
   border-radius: 32px;
   text-align: center;
   color: #ffffff;
@@ -1369,10 +1329,10 @@ label[for="theme-toggle"]{
 
 .newsletter-subtitle {
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-weight: 300;   
   max-width: 640px;
   margin: 0 auto 20px;
-  padding-left: 24px;
+  padding-left: 24px;   
   padding-right: 24px;
   padding-bottom: 12px;
   font-size: 0.95rem;
@@ -1380,7 +1340,7 @@ label[for="theme-toggle"]{
   opacity: 0.9;
 }
 
-/* Formulario */
+/* ---------- Formulario ---------- */
 
 .newsletter-form {
   display: flex;
@@ -1400,7 +1360,6 @@ label[for="theme-toggle"]{
 }
 
 /* input */
-
 .newsletter-input {
   flex: 1;
   border: none;
@@ -1415,11 +1374,10 @@ label[for="theme-toggle"]{
 .newsletter-input::placeholder {
   color: #9b9bb5;
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-weight: 300;   
 }
 
 /* botón */
-
 .newsletter-btn {
   display: inline-flex;
   align-items: center;
@@ -1430,35 +1388,26 @@ label[for="theme-toggle"]{
   color: var(--btn-text);
   box-shadow: var(--btn-shadow);
   flex-shrink: 0;
-  font-size: 13px;
+
+  font-size: 13px;  
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-weight: 300; 
 }
 
 .newsletter-btn .btn-icon {
   width: 14px;
   height: 14px;
+  
 }
 
-/* Tablet SECTION 6 (>=600px) */
+/* ---------- Responsive ---------- */
 
-@media (min-width: 600px) {
+@media (max-width: 768px) {
+
   .newsletter-box {
-    padding: 60px 40px;
+    padding: 48px 24px;
   }
-}
 
-/* Desktop SECTION 6 (>=1024px) */
-
-@media (min-width: 1024px) {
-  .newsletter-box {
-    padding: 80px 60px;
-  }
-}
-
-/* En mobile pequeño, apilar input + botón verticalmente */
-
-@media (max-width: 599px) {
   .newsletter-input-wrapper {
     flex-direction: column;
     align-items: stretch;
@@ -1472,9 +1421,7 @@ label[for="theme-toggle"]{
   }
 }
 
-/* ================================
-   FOOTER
-================================ */
+/* ------------------------------------ Footer ----------------------------------- */
 
 .site-footer {
   margin-top: 80px;
@@ -1484,19 +1431,17 @@ label[for="theme-toggle"]{
   transition: background-color 0.4s ease;
 }
 
-/* GRID principal: logo + Address + Contact + Office (mobile default: 1 col) */
-
+/* GRID principal: logo + Address + Contact + Office */
 .footer-inner {
   max-width: 1120px;
   margin: 0 auto 32px;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
-  align-items: start;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: start; /* alinea logo y headings en la misma altura */
 }
 
 /* Columna marca (logo + texto) */
-
 .footer-logo {
   height: 25px;
   margin-bottom: 16px;
@@ -1506,64 +1451,58 @@ label[for="theme-toggle"]{
 .footer-description {
   font-size: 0.9rem;
   line-height: 1.6;
-  margin-right: 0;
+  margin-right: 90px;
 }
 
 /* Headings de columnas (Address, Contact, Office) */
-
 .footer-heading {
   font-family: "Lora", serif;
-  font-size: 24px;
+  font-size: 24px;              
   font-weight: 400;
   margin-bottom: 12px;
-  color: #F5E9FF;
+  color: #F5E9FF;      
 }
 
 /* Textos de columnas */
-
 .footer-text {
   font-size: 0.9rem;
   line-height: 1.6;
   margin: 0;
 }
 
-/* Color para textos secundarios (Take care…, 12345…, +123…, Monday…, y copyright) */
-
+/* Color para TODOS los textos secundarios:
+   "Take care...", "12345 M/01...", "+123...", "Monday...", y el copyright */
 .footer-description,
 .footer-text,
 .footer-copy {
   color: #A197B4;
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: 500;   
 }
 
 /* Línea divisoria */
-
 .footer-divider {
   max-width: 1120px;
   margin: 0 auto 16px;
   height: 1px;
-  transform: scaleY(0.5);
+  transform: scaleY(0.5); 
   background: #A197B4;
 }
 
 /* Fila inferior: redes sociales (izquierda) + copyright (derecha) */
-
 .footer-bottom-row {
   max-width: 1120px;
   margin: 0 auto;
   padding-top: 16px;
   display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center; /* alinea íconos y texto en la misma altura */
 }
 
 /* Redes sociales */
-
 .footer-social {
   display: flex;
-  gap: 32px;
+  gap: 32px; /* spacing 32px entre iconos */
 }
 
 .footer-social img {
@@ -1572,50 +1511,39 @@ label[for="theme-toggle"]{
 }
 
 /* Copyright */
-
 .footer-copy {
   font-size: 0.8rem;
   margin: 0;
 }
 
-/* Tablet FOOTER (>=600px) */
+/* -------- Footer responsive -------- */
 
-@media (min-width: 600px) {
+@media (max-width: 900px) {
   .footer-inner {
     grid-template-columns: 1fr 1fr;
     row-gap: 32px;
   }
+}
+
+@media (max-width: 600px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
 
   .footer-bottom-row {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer-description {
-    margin-right: 60px;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
   }
 }
 
-/* Desktop FOOTER (>=1024px) */
-
-@media (min-width: 1024px) {
-  .footer-inner {
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
-    gap: 40px;
-  }
-
-  .footer-description {
-    margin-right: 90px;
-  }
-}
-
-/* Footer dark mode (según prefers-color-scheme) */
+/* -------- Footer dark mode -------- */
 
 @media (prefers-color-scheme: dark) {
   .site-footer {
-    background: #14092A;
+    background: #14092A; /* Dark mode */
   }
 }
+
 
 /* Andrea - end */

@@ -1031,8 +1031,6 @@ label[for="theme-toggle"]{
   left: 0;
   width: 90%;
   z-index: 2;
-  border-radius: 192px;
-  box-shadow: 0 0 0 8px var(--bg-color);
 }
 
 .section-4-place-img-bottom {

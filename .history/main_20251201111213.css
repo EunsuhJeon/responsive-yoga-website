@@ -51,7 +51,8 @@ main{
     --padding-x-desktop: 3rem 0;
     /* Jade - variables - end */
     /* Sección 4 - Andrea  - Light Mode*/
-    --pill-btn-bg: #ffffff;    
+    --pill-btn-bg: #ffffff;      
+    --pill-btn-text: #372A51;    
 }
 
 button,
@@ -67,6 +68,11 @@ button,
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.2s ease;
+
+  /* Sección 4 - Andrea  - Light Mode*/
+  --pill-btn-bg: #ffffff;
+  --pill-btn-text: #372A51;
+
 }
 
 /* Hover */
@@ -99,8 +105,9 @@ body:has(#theme-toggle:checked){
     --dropdown-bg-color: #D1C0F1;
     --small-container-bg-color: #372A51;
     --mobile-nav-bg-color: rgba(26, 26, 26, 0.3);
-  /* Sección 4 - Andrea */
-    --pill-btn-bg: #372A51; 
+  /* Andrea: Section-4 pill buttons change to #372A51 in dark mode*/
+    --pill-btn-bg: #372A51;
+    --pill-btn-text: #F5F0FF;
 }
 
 body:has(#theme-toggle:checked) .go-to-light{
@@ -1031,8 +1038,6 @@ label[for="theme-toggle"]{
   left: 0;
   width: 90%;
   z-index: 2;
-  border-radius: 192px;
-  box-shadow: 0 0 0 8px var(--bg-color);
 }
 
 .section-4-place-img-bottom {
@@ -1052,7 +1057,8 @@ label[for="theme-toggle"]{
   gap: 8px;
   padding: 10px 8px;
   border-radius: 10px;
-  background: var(--pill-btn-bg);
+  background: var(--pill-btn-bg, #ffffff);
+  color: var(--pill-btn-text, #372A51);
   box-shadow: var(--btn-shadow);
   border: none;
   z-index: 10;
