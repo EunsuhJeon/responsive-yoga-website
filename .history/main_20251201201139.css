@@ -1615,8 +1615,6 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
     height: 14px;
   }
 }
-
-
 /* ================================
    FOOTER
 ================================ */
@@ -1654,7 +1652,7 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   margin-right: 0;
 }
 
-/* Headings de columnas (Address, Contact, Office) */
+/* Headings de columnas */
 
 .footer-heading {
   font-family: "Lora", serif;
@@ -1664,15 +1662,13 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   color: #F5E9FF;
 }
 
-/* Textos de columnas */
+/* Textos */
 
 .footer-text {
   font-size: 0.9rem;
   line-height: 1.6;
   margin: 0;
 }
-
-/* Color para textos secundarios */
 
 .footer-description,
 .footer-text,
@@ -1692,7 +1688,7 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   background: #A197B4;
 }
 
-/* Fila inferior: redes sociales + copyright */
+/* Fila inferior: redes + copyright */
 
 .footer-bottom-row {
   max-width: 1120px;
@@ -1701,7 +1697,7 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  align-items: flex-start;   /* DEFAULT desktop/tablet */
+  align-items: flex-start;
 }
 
 /* Redes sociales */
@@ -1723,9 +1719,42 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   margin: 0;
 }
 
-/* ================================
-   TABLET (>=600px)
+/* ===============================
+     MOBILE (<=599px)
+     Centramos TODO
 ================================ */
+
+@media (max-width: 599px) {
+
+  /* Centrar todo el grid */
+  .footer-inner {
+    text-align: center;
+    justify-items: center;
+  }
+
+  /* Centrar textos */
+  .footer-description,
+  .footer-text {
+    text-align: center;
+  }
+
+  /* Centrar redes sociales */
+  .footer-bottom-row {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  /* Centrar copyright */
+  .footer-copy {
+    text-align: center;
+  }
+}
+
+/* Tablet FOOTER (>=600px) */
 
 @media (min-width: 600px) {
   .footer-inner {
@@ -1744,9 +1773,7 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   }
 }
 
-/* ================================
-   DESKTOP (>=1024px)
-================================ */
+/* Desktop FOOTER (>=1024px) */
 
 @media (min-width: 1024px) {
   .footer-inner {
@@ -1759,34 +1786,11 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   }
 }
 
-/* ================================
-   DARK MODE
-================================ */
+/* Dark mode */
 
 @media (prefers-color-scheme: dark) {
   .site-footer {
     background: #14092A;
-  }
-}
-
-/* ================================
-   MOBILE (<=599px)
-   SOLO centrar íconos y copyright
-================================ */
-
-@media (max-width: 599px) {
-
-  .footer-bottom-row {
-    align-items: center;   /* centra todo el bloque */
-    text-align: center;
-  }
-
-  .footer-social {
-    justify-content: center; /* centra los iconos */
-  }
-
-  .footer-copy {
-    text-align: center;      /* centra el copyright */
   }
 }
 
