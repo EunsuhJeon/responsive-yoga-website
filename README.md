@@ -21,4 +21,4 @@ Young kim: [Responsive yoga website](https://www.figma.com/community/file/122961
 | Name      | Assigned Part           | Key Roles & Features                                                                 |
 |-----------|------------------------|------------------------------------------------------------------------------------|
 | Jade    | Header, Top of Main     | - Implemented dark/light mode toggle button<br>- Styled mobile & desktop navigation separately<br>- Developed webpage according to mockup, ensured responsive design |
-| Andrea    | Bottom of Main, Footer  | - Developed webpage according to mockup, ensured responsive design                 |
+| Andrea    | Bottom of Main, Footer  | - Developed webpage according to mockup, ensured responsive design<br>- Optimized layouts for both mobile and desktop screens<br>- Implemented dark/light mode styling throughout the page                |
