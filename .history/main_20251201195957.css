@@ -1442,7 +1442,7 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
 .newsletter-box {
   width: 100%;
   background: var(--btn-gradient);
-  padding: 60px 40px;
+  padding: 48px 24px;
   border-radius: 32px;
   text-align: center;
   color: #ffffff;
@@ -1469,7 +1469,7 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   opacity: 0.9;
 }
 
-/* ---------- Formulario (desktop/tablet base) ---------- */
+/* ---------- Formulario ---------- */
 
 .newsletter-form {
   display: flex;
@@ -1546,7 +1546,7 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
 }
 
 /* ---------- Mobile pequeño (<=599px) ---------- */
-/* Ajustes SOLO para mobile 243 x 1520 */
+/* Input blanco y botón separados como en el diseño */
 
 @media (max-width: 599px) {
 
@@ -1561,58 +1561,52 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
 
   .newsletter-title {
     font-size: 2rem;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     margin-left: 0;
   }
 
   .newsletter-subtitle {
-    font-size: 0.88rem;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 8px;
+    font-size: 0.85rem;
+    padding-left: 12px;
+    padding-right: 12px;
     max-width: 95%;
     line-height: 1.45;
     margin-bottom: 18px;
   }
 
-  /* Input + botón apilados, poco espacio entre ellos */
+  /* Aquí se separan visualmente input y botón */
   .newsletter-input-wrapper {
     flex-direction: column;
     align-items: center;
-    gap: 10px;                  /* 🔸 poquito espacio entre input y botón */
+    gap: 18px;                 /* espacio entre input y botón */
     padding: 0;
-    max-width: 320px;           /* 🔸 suficiente para que el texto se vea completo */
-    width: 100%;
-    background: transparent;
-    box-shadow: none;           /* el sombreado pasa al input, no al wrapper */
+    max-width: 280px;
+    max-height: none;
+    background: transparent;   /* deja de ser un “bloque” blanco */
+    box-shadow: none;
   }
 
   .newsletter-input {
     width: 100%;
     background: #ffffff;
     border-radius: 999px;
-    padding: 16px 22px;         /* 🔸 más espacio horizontal para el texto */
-    font-size: 15px;
+    padding: 12px 18px;
+    font-size: 13px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
-    text-align: left;
-  }
-
-  .newsletter-input::placeholder {
-    font-size: 15px;            /* 🔸 el placeholder también más grande */
   }
 
   .newsletter-btn {
     width: 100%;
     justify-content: center;
-    padding: 14px 22px;
-    font-size: 14px;
+    padding: 12px 20px;
+    font-size: 13px;
     border-radius: 999px;
-    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25); /* sombra del botón rosa */
   }
 
   .newsletter-btn .btn-icon {
-    width: 14px;
-    height: 14px;
+    width: 13px;
+    height: 13px;
   }
 }
 
@@ -1672,7 +1666,7 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   margin: 0;
 }
 
-/* Color para textos secundarios */
+/* Color para textos secundarios (Take care…, 12345…, +123…, Monday…, y copyright) */
 
 .footer-description,
 .footer-text,
@@ -1692,7 +1686,7 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   background: #A197B4;
 }
 
-/* Fila inferior: redes sociales + copyright */
+/* Fila inferior: redes sociales (izquierda) + copyright (derecha) */
 
 .footer-bottom-row {
   max-width: 1120px;
@@ -1701,7 +1695,7 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  align-items: flex-start;   /* DEFAULT desktop/tablet */
+  align-items: flex-start;
 }
 
 /* Redes sociales */
@@ -1723,9 +1717,7 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   margin: 0;
 }
 
-/* ================================
-   TABLET (>=600px)
-================================ */
+/* Tablet FOOTER (>=600px) */
 
 @media (min-width: 600px) {
   .footer-inner {
@@ -1744,9 +1736,7 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   }
 }
 
-/* ================================
-   DESKTOP (>=1024px)
-================================ */
+/* Desktop FOOTER (>=1024px) */
 
 @media (min-width: 1024px) {
   .footer-inner {
@@ -1759,36 +1749,12 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   }
 }
 
-/* ================================
-   DARK MODE
-================================ */
+/* Footer dark mode (según prefers-color-scheme) */
 
 @media (prefers-color-scheme: dark) {
   .site-footer {
     background: #14092A;
   }
 }
-
-/* ================================
-   MOBILE (<=599px)
-   SOLO centrar íconos y copyright
-================================ */
-
-@media (max-width: 599px) {
-
-  .footer-bottom-row {
-    align-items: center;   /* centra todo el bloque */
-    text-align: center;
-  }
-
-  .footer-social {
-    justify-content: center; /* centra los iconos */
-  }
-
-  .footer-copy {
-    text-align: center;      /* centra el copyright */
-  }
-}
-
 
 /* Andrea - end */

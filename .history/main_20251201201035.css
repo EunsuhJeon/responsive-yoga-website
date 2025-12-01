@@ -1616,7 +1616,6 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   }
 }
 
-
 /* ================================
    FOOTER
 ================================ */
@@ -1672,7 +1671,7 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   margin: 0;
 }
 
-/* Color para textos secundarios */
+/* Color para textos secundarios (Take care…, 12345…, +123…, Monday…, y copyright) */
 
 .footer-description,
 .footer-text,
@@ -1692,7 +1691,7 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   background: #A197B4;
 }
 
-/* Fila inferior: redes sociales + copyright */
+/* Fila inferior: redes sociales (izquierda) + copyright (derecha) */
 
 .footer-bottom-row {
   max-width: 1120px;
@@ -1701,7 +1700,7 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  align-items: flex-start;   /* DEFAULT desktop/tablet */
+  align-items: flex-start;
 }
 
 /* Redes sociales */
@@ -1723,9 +1722,7 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   margin: 0;
 }
 
-/* ================================
-   TABLET (>=600px)
-================================ */
+/* Tablet FOOTER (>=600px) */
 
 @media (min-width: 600px) {
   .footer-inner {
@@ -1744,9 +1741,7 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   }
 }
 
-/* ================================
-   DESKTOP (>=1024px)
-================================ */
+/* Desktop FOOTER (>=1024px) */
 
 @media (min-width: 1024px) {
   .footer-inner {
@@ -1759,36 +1754,12 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   }
 }
 
-/* ================================
-   DARK MODE
-================================ */
+/* Footer dark mode (según prefers-color-scheme) */
 
 @media (prefers-color-scheme: dark) {
   .site-footer {
     background: #14092A;
   }
 }
-
-/* ================================
-   MOBILE (<=599px)
-   SOLO centrar íconos y copyright
-================================ */
-
-@media (max-width: 599px) {
-
-  .footer-bottom-row {
-    align-items: center;   /* centra todo el bloque */
-    text-align: center;
-  }
-
-  .footer-social {
-    justify-content: center; /* centra los iconos */
-  }
-
-  .footer-copy {
-    text-align: center;      /* centra el copyright */
-  }
-}
-
 
 /* Andrea - end */
