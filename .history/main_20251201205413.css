@@ -1411,25 +1411,21 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
     height: 240px;
     
   }
-.seccion-5-img-bl {
+
+    .seccion-5-img-bl {
     rotate: 15deg;
-    /* Aumentamos el margen superior para separarla de lo anterior */
-    margin-top: 15px; 
-    /* Aumentamos el margen inferior para separarla de lo siguiente */
-    margin-bottom: 20px; 
-    /* Aumentamos el margen izquierdo para alejarla del borde/otro elemento */
-    margin-left: 30px; 
+    margin-top: -5px;
+    margin-bottom: 0px;
+    margin-left: -10px;
   }
 
   .seccion-5-img-br {
     rotate: -15deg;
-    /* Aumentamos el margen superior para separarla de lo anterior */
-    margin-top: 20px; 
-    /* Aumentamos el margen inferior para separarla de lo siguiente */
-    margin-bottom: 60px; 
-    /* Ajustamos el margen derecho para alejarla del borde/otro elemento */
-    margin-right: -30px;
+    margin-top: -5px;
+    margin-bottom: 40px;
+    margin-right: -25px;
   }
+
 }
 
 /* -------- Desktop SECTION 5 (>=1024px) -------- */
@@ -1444,20 +1440,6 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
 
   .seccion-5-img-br {
     transform: scale(1.25) translateX(15px);
-  }
-
-.seccion-5-img-bl {
-    rotate: 15deg;
-    margin-top: 15px; 
-    margin-bottom: 20px; 
-    margin-left: 30px; 
-  }
-
-  .seccion-5-img-br {
-    rotate: -15deg;
-    margin-top: 20px; 
-    margin-bottom: 60px;     
-    margin-right: -50px;
   }
 }
 /* ================================
