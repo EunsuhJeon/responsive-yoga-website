@@ -1114,21 +1114,18 @@ label[for="theme-toggle"]{
   .section-4-place-images {
     width: 360px;
     height: 360px;
-    box-shadow: 0 0 0 8px var(--bg-color);
   }
 
   .pill-btn-top {
     top: 22%;
     right: 12%;
     transform: translate(20%, -50%);
-    font-size: 1.2rem;
   }
 
   .pill-btn-bottom {
     bottom: 12%;
     left: 12%;
     transform: translate(-15%, 50%);
-    font-size: 1.2rem;
   }
     .section-4-title {
     font-size: 3rem;
@@ -1150,8 +1147,6 @@ label[for="theme-toggle"]{
   .section-4-place-img-top {
     left: -25px;
     width: 95%;
-
-    box-shadow: 0 0 0 8px var(--bg-color);
   }
 
   .section-4-place-img-bottom {
@@ -1159,7 +1154,6 @@ label[for="theme-toggle"]{
     right: 0;
     width: 85%;
   }
-
 }
 /* ================================
 SECTION 5 - FOLLOW
@@ -1397,72 +1391,69 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
     margin-right: -25px;
   }
 }
-
 /* -------- Tablet SECTION 5 (>=600px) -------- */
 
 @media (min-width: 600px) {
-  .seccion-5-top,
-  .seccion-5-bottom {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 90px;
-  }
+    /* ... (Otros estilos de tableta) ... */
 
-  .seccion-5-title {
-    margin-top: 8px;
-  }
+    .seccion-5-img-tl,
+    .seccion-5-img-tr {
+      width: 280px;
+      height: 420px;
+    }
 
-  .seccion-5-img-tl,
-  .seccion-5-img-tr {
-    width: 280px;
-    height: 410px;
-    margin-top: 65px;
-  
-  }
-
-  .seccion-5-img-bl,
-  .seccion-5-img-br {
-    width: 420px;
-    height: 240px;
+    .seccion-5-img-bl,
+    .seccion-5-img-br {
+      width: 420px;
+      height: 240px;
+    }
     
-  }
-.seccion-5-img-bl {
-    rotate: 15deg;
-    margin-top: 15px; 
-    margin-bottom: 40px; 
-    margin-left: 0px; 
-  }
+    /* Estas propiedades son específicas de tableta (600px a 1023px) */
+    .seccion-5-img-bl {
+      rotate: 15deg; /* <--- Sobrescribir en Desktop */
+      margin-top: 15px; /* <--- Sobrescribir en Desktop */
+      margin-bottom: 40px; /* <--- Sobrescribir en Desktop */
+      margin-left: 70px; /* <--- Sobrescribir en Desktop */
+    }
 
-  .seccion-5-img-br {
-    rotate: -15deg;
-    margin-top: 20px; 
-    margin-bottom: 90px;     
-    margin-right: 0px;
-  }
+    .seccion-5-img-br {
+      rotate: -15deg; /* <--- Sobrescribir en Desktop */
+      margin-top: 20px; /* <--- Sobrescribir en Desktop */
+      margin-bottom: 90px; /* <--- Sobrescribir en Desktop */
+      margin-right: 70px; /* <--- Sobrescribir en Desktop */
+    }
 }
 
 /* -------- Desktop SECTION 5 (>=1024px) -------- */
 
 @media (min-width: 1024px) {
-  .seccion-5-img-bl,
-  .seccion-5-img-br {
-    width: 500px;
-    height: 257px;
-  }
+    /* 1. Sobrescribir el ancho/alto de las imágenes bl/br */
+    .seccion-5-img-bl,
+    .seccion-5-img-br {
+      width: 500px;
+      height: 257px;
+    }
 
-  .seccion-5-img-bl {
-    rotate: 15deg;
-    margin-top: 15px; 
-    margin-bottom: 40px; 
-    margin-left: 0px;  
-  }
+    /* 2. Aplicar la transformación de escala/traslación */
+    .seccion-5-img-bl {
+      transform: scale(1.25) translateX(-15px);
+      
+      /* 3. Sobrescribir las propiedades de tableta para BL */
+      rotate: 0deg; /* Lo pongo a 0deg para anular el rotate de tableta. Si quieres rotación en desktop, usa el valor deseado. */
+      margin-top: 15px; 
+      margin-bottom: 40px; 
+      margin-left: 30px; 
+    }
 
-  .seccion-5-img-br {
-    rotate: -15deg;
-    margin-top: 20px; 
-    margin-bottom: 90px;     
-    margin-right: 0px;
-  }
+    .seccion-5-img-br {
+      transform: scale(1.25) translateX(15px);
+      
+      /* 4. Sobrescribir las propiedades de tableta para BR */
+      rotate: 0deg; /* Lo pongo a 0deg para anular el rotate de tableta. Si quieres rotación en desktop, usa el valor deseado. */
+      margin-top: 20px; 
+      margin-bottom: 90px;     
+      margin-right: -70px;
+    }
 }
 /* ================================
    SECTION 6 - NEWSLETTER

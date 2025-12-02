@@ -1114,21 +1114,18 @@ label[for="theme-toggle"]{
   .section-4-place-images {
     width: 360px;
     height: 360px;
-    box-shadow: 0 0 0 8px var(--bg-color);
   }
 
   .pill-btn-top {
     top: 22%;
     right: 12%;
     transform: translate(20%, -50%);
-    font-size: 1.2rem;
   }
 
   .pill-btn-bottom {
     bottom: 12%;
     left: 12%;
     transform: translate(-15%, 50%);
-    font-size: 1.2rem;
   }
     .section-4-title {
     font-size: 3rem;
@@ -1150,8 +1147,6 @@ label[for="theme-toggle"]{
   .section-4-place-img-top {
     left: -25px;
     width: 95%;
-
-    box-shadow: 0 0 0 8px var(--bg-color);
   }
 
   .section-4-place-img-bottom {
@@ -1159,7 +1154,6 @@ label[for="theme-toggle"]{
     right: 0;
     width: 85%;
   }
-
 }
 /* ================================
 SECTION 5 - FOLLOW
@@ -1396,16 +1390,14 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
     margin-bottom: 40px;
     margin-right: -25px;
   }
-}
-
-/* -------- Tablet SECTION 5 (>=600px) -------- */
+}/* -------- Tablet SECTION 5 (>=600px) -------- */
 
 @media (min-width: 600px) {
   .seccion-5-top,
   .seccion-5-bottom {
     flex-direction: row;
     justify-content: space-between;
-    gap: 90px;
+    gap: 32px;
   }
 
   .seccion-5-title {
@@ -1415,53 +1407,70 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   .seccion-5-img-tl,
   .seccion-5-img-tr {
     width: 280px;
-    height: 410px;
-    margin-top: 65px;
-  
+    height: 420px;
   }
 
+  /* Estilos base de tamaño y rotación para Tablet */
   .seccion-5-img-bl,
   .seccion-5-img-br {
     width: 420px;
     height: 240px;
-    
   }
-.seccion-5-img-bl {
-    rotate: 15deg;
-    margin-top: 15px; 
-    margin-bottom: 40px; 
-    margin-left: 0px; 
+  
+  .seccion-5-img-bl {
+    rotate: 15deg; /* Rotación de tableta */
+    margin-top: 15px;
+    margin-bottom: 40px;
+    margin-left: 70px;
   }
 
   .seccion-5-img-br {
-    rotate: -15deg;
-    margin-top: 20px; 
-    margin-bottom: 90px;     
-    margin-right: 0px;
+    rotate: -15deg; /* Rotación de tableta */
+    margin-top: 20px;
+    margin-bottom: 90px;
+    margin-right: 70px;
   }
 }
 
 /* -------- Desktop SECTION 5 (>=1024px) -------- */
 
 @media (min-width: 1024px) {
+  /* Añadir el gap para la fila inferior en Desktop */
+  .seccion-5-bottom {
+    gap: 64px; 
+    justify-content: center;
+  }
+
+  /* 1. Sobrescribir el ancho/alto de las imágenes bl/br */
   .seccion-5-img-bl,
   .seccion-5-img-br {
     width: 500px;
     height: 257px;
+    transform: none; 
   }
 
+  /* 2. Estilos específicos para la imagen BL en Desktop */
   .seccion-5-img-bl {
-    rotate: 15deg;
-    margin-top: 15px; 
-    margin-bottom: 40px; 
-    margin-left: 0px;  
+    transform: scale(1.25) translateX(-15px);
+    
+    /* ¡CORRECCIÓN! Esto anula la rotación de tableta */
+    rotate: 0deg; 
+    
+    margin-top: 15px;
+    margin-bottom: 40px;
+    margin-left: 30px;
   }
 
+  /* 3. Estilos específicos para la imagen BR en Desktop */
   .seccion-5-img-br {
-    rotate: -15deg;
-    margin-top: 20px; 
-    margin-bottom: 90px;     
-    margin-right: 0px;
+    transform: scale(1.25) translateX(15px);
+    
+    /* ¡CORRECCIÓN! Esto anula la rotación de tableta */
+    rotate: 0deg;
+    
+    margin-top: 20px;
+    margin-bottom: 90px;
+    margin-right: -70px;
   }
 }
 /* ================================

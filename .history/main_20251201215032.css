@@ -1114,21 +1114,18 @@ label[for="theme-toggle"]{
   .section-4-place-images {
     width: 360px;
     height: 360px;
-    box-shadow: 0 0 0 8px var(--bg-color);
   }
 
   .pill-btn-top {
     top: 22%;
     right: 12%;
     transform: translate(20%, -50%);
-    font-size: 1.2rem;
   }
 
   .pill-btn-bottom {
     bottom: 12%;
     left: 12%;
     transform: translate(-15%, 50%);
-    font-size: 1.2rem;
   }
     .section-4-title {
     font-size: 3rem;
@@ -1150,8 +1147,6 @@ label[for="theme-toggle"]{
   .section-4-place-img-top {
     left: -25px;
     width: 95%;
-
-    box-shadow: 0 0 0 8px var(--bg-color);
   }
 
   .section-4-place-img-bottom {
@@ -1159,7 +1154,6 @@ label[for="theme-toggle"]{
     right: 0;
     width: 85%;
   }
-
 }
 /* ================================
 SECTION 5 - FOLLOW
@@ -1414,10 +1408,9 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
 
   .seccion-5-img-tl,
   .seccion-5-img-tr {
-    width: 280px;
-    height: 410px;
+    width: 380px;
+    height: 420px;
     margin-top: 65px;
-  
   }
 
   .seccion-5-img-bl,
