@@ -1160,6 +1160,19 @@ label[for="theme-toggle"]{
     width: 85%;
   }
 
+  .pill-btn-top {
+    top: 22%;
+    right: 12%;
+    transform: translate(20%, -50%);
+    font-size: 1.2rem;
+  }
+
+  .pill-btn-bottom {
+    bottom: 12%;
+    left: 12%;
+    transform: translate(-15%, 50%);
+    font-size: 1.2rem;
+  }
 }
 /* ================================
 SECTION 5 - FOLLOW

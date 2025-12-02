@@ -1114,21 +1114,18 @@ label[for="theme-toggle"]{
   .section-4-place-images {
     width: 360px;
     height: 360px;
-    box-shadow: 0 0 0 8px var(--bg-color);
   }
 
   .pill-btn-top {
     top: 22%;
     right: 12%;
     transform: translate(20%, -50%);
-    font-size: 1.2rem;
   }
 
   .pill-btn-bottom {
     bottom: 12%;
     left: 12%;
     transform: translate(-15%, 50%);
-    font-size: 1.2rem;
   }
     .section-4-title {
     font-size: 3rem;
@@ -1150,8 +1147,6 @@ label[for="theme-toggle"]{
   .section-4-place-img-top {
     left: -25px;
     width: 95%;
-
-    box-shadow: 0 0 0 8px var(--bg-color);
   }
 
   .section-4-place-img-bottom {
@@ -1159,7 +1154,6 @@ label[for="theme-toggle"]{
     right: 0;
     width: 85%;
   }
-
 }
 /* ================================
 SECTION 5 - FOLLOW
@@ -1218,7 +1212,7 @@ SECTION 5 - FOLLOW
 
 .seccion-5-img {
   object-fit: contain;
-  border-radius: 182px;
+  border-radius: 200px;
   background: transparent;
 }
 
@@ -1229,7 +1223,7 @@ SECTION 5 - FOLLOW
   width: 240px;
   height: 390px;
   transition: transform 0.35s ease;
-  border: 10px solid #E5D9FD;        /* borde light */
+  border: 8px solid #E5D9FD;        /* borde light */
 }
 
 /* Imágenes inferiores (apaisadas) – base tablet+ */
@@ -1240,7 +1234,7 @@ SECTION 5 - FOLLOW
   height: 220px;
   margin-top: 20px;
   transition: transform 0.35s ease;
-  border: 10px solid #E5D9FD;  
+  border: 8px solid #E5D9FD;  
 }
 
 .seccion-5-img-bl {
@@ -1405,7 +1399,7 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   .seccion-5-bottom {
     flex-direction: row;
     justify-content: space-between;
-    gap: 90px;
+    gap: 32px;
   }
 
   .seccion-5-title {
@@ -1415,9 +1409,7 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   .seccion-5-img-tl,
   .seccion-5-img-tr {
     width: 280px;
-    height: 410px;
-    margin-top: 65px;
-  
+    height: 420px;
   }
 
   .seccion-5-img-bl,
@@ -1428,16 +1420,22 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   }
 .seccion-5-img-bl {
     rotate: 15deg;
+    /* Aumentamos el margen superior para separarla de lo anterior */
     margin-top: 15px; 
-    margin-bottom: 40px; 
-    margin-left: 0px; 
+    /* Aumentamos el margen inferior para separarla de lo siguiente */
+    margin-bottom: 20px; 
+    /* Aumentamos el margen izquierdo para alejarla del borde/otro elemento */
+    margin-left: 30px; 
   }
 
   .seccion-5-img-br {
     rotate: -15deg;
+    /* Aumentamos el margen superior para separarla de lo anterior */
     margin-top: 20px; 
-    margin-bottom: 90px;     
-    margin-right: 0px;
+    /* Aumentamos el margen inferior para separarla de lo siguiente */
+    margin-bottom: 60px; 
+    /* Ajustamos el margen derecho para alejarla del borde/otro elemento */
+    margin-right: -30px;
   }
 }
 
@@ -1448,20 +1446,25 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   .seccion-5-img-br {
     width: 500px;
     height: 257px;
+    transform: scale(1.25) translateX(-15px);
   }
 
-  .seccion-5-img-bl {
+  .seccion-5-img-br {
+    transform: scale(1.25) translateX(15px);
+  }
+
+.seccion-5-img-bl {
     rotate: 15deg;
     margin-top: 15px; 
-    margin-bottom: 40px; 
-    margin-left: 0px;  
+    margin-bottom: 20px; 
+    margin-left: 30px; 
   }
 
   .seccion-5-img-br {
     rotate: -15deg;
     margin-top: 20px; 
-    margin-bottom: 90px;     
-    margin-right: 0px;
+    margin-bottom: 60px;     
+    margin-right: -50px;
   }
 }
 /* ================================
@@ -1592,7 +1595,7 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   }
 
   .newsletter-box {
-    padding: 52px 20px;
+    padding: 32px 20px;
     border-radius: 28px;
   }
 
@@ -1616,26 +1619,26 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
   .newsletter-input-wrapper {
     flex-direction: column;
     align-items: center;
-    gap: 10px;                  
+    gap: 10px;                  /* 🔸 poquito espacio entre input y botón */
     padding: 0;
-    max-width: 320px;         
+    max-width: 320px;           /* 🔸 suficiente para que el texto se vea completo */
     width: 100%;
     background: transparent;
-    box-shadow: none;          
+    box-shadow: none;           /* el sombreado pasa al input, no al wrapper */
   }
 
   .newsletter-input {
     width: 100%;
     background: #ffffff;
     border-radius: 999px;
-    padding: 16px 22px;         
-    font-size: 0.38rem;
+    padding: 16px 22px;         /* 🔸 más espacio horizontal para el texto */
+    font-size: 15px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
     text-align: left;
   }
 
   .newsletter-input::placeholder {
-    font-size: 0.38rem;  ;           
+    font-size: 15px;            /* 🔸 el placeholder también más grande */
   }
 
   .newsletter-btn {
@@ -1808,6 +1811,7 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
 
 /* ================================
    MOBILE (<=599px)
+   SOLO centrar íconos y copyright
 ================================ */
 
 @media (max-width: 599px) {

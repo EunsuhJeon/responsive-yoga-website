@@ -1121,14 +1121,12 @@ label[for="theme-toggle"]{
     top: 22%;
     right: 12%;
     transform: translate(20%, -50%);
-    font-size: 1.2rem;
   }
 
   .pill-btn-bottom {
     bottom: 12%;
     left: 12%;
     transform: translate(-15%, 50%);
-    font-size: 1.2rem;
   }
     .section-4-title {
     font-size: 3rem;
@@ -1159,7 +1157,6 @@ label[for="theme-toggle"]{
     right: 0;
     width: 85%;
   }
-
 }
 /* ================================
 SECTION 5 - FOLLOW
