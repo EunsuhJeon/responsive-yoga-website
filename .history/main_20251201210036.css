@@ -1448,16 +1448,22 @@ body:has(#theme-toggle:checked) .seccion-5-img-br {
 
 .seccion-5-img-bl {
     rotate: 15deg;
+    /* Aumentamos el margen superior para separarla de lo anterior */
     margin-top: 15px; 
+    /* Aumentamos el margen inferior para separarla de lo siguiente */
     margin-bottom: 20px; 
+    /* Aumentamos el margen izquierdo para alejarla del borde/otro elemento */
     margin-left: 30px; 
   }
 
   .seccion-5-img-br {
     rotate: -15deg;
+    /* Aumentamos el margen superior para separarla de lo anterior */
     margin-top: 20px; 
-    margin-bottom: 60px;     
-    margin-right: -50px;
+    /* Aumentamos el margen inferior para separarla de lo siguiente */
+    margin-bottom: 60px; 
+    /* Ajustamos el margen derecho para alejarla del borde/otro elemento */
+    margin-right: 0px;
   }
 }
 /* ================================
